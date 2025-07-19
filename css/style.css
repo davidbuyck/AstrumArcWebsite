@@ -29,7 +29,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem; /* Increased spacing between links */
 }
 
 .nav a {
@@ -57,6 +61,11 @@ body {
 
 .nav-toggle {
   display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
 }
 
 /* Hero Section */
@@ -144,27 +153,46 @@ body {
 }
 
 /* Responsive Styles */
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .nav {
     flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .nav-links {
     display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: right;
     gap: 0.5rem;
   }
 
-  .nav.open {
+  .nav-links.open {
     display: flex;
   }
 
   .nav-toggle {
     display: block;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #333;
   }
 
   .mission-content {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem; /* Horizontal spacing for large screens */
+  }
+
+  .nav-toggle {
+    display: none;
   }
 }
