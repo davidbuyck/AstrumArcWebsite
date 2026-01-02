@@ -126,3 +126,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     history.replaceState(null, "", "#" + id)
   })
 })
+
+document.querySelectorAll(".thumb[data-img]").forEach(t => {
+  t.style.backgroundImage = `url("${t.dataset.img}")`
+})
