@@ -174,23 +174,35 @@ button{font:inherit}
   display:flex; gap:10px; padding: 10px 10px 0;
 }
 
-/* HERO: real background image + subtle overlays */
+
+/* Put your streak image here */
 .heroDark{
-  color: var(--textLight);
-  padding: 56px 0 64px;
   position: relative;
+  width: 100%;
+  height: calc(100vw * (692 / 1536));
+  min-height: 420px;
+  max-height: 720px;
+  display: flex;
+  align-items: center;
   overflow: hidden;
 }
 
-/* Put your streak image here */
+
 .heroBgImage{
   background:
-    linear-gradient(180deg, rgba(7,17,38,.55) 0%, rgba(7,17,38,.70) 55%, rgba(7,17,38,.92) 100%),
-    url("../img/hero-streaks.jpg");
-  background-size: cover;
-  background-position: center;
+    linear-gradient(
+      180deg,
+      rgba(7,17,38,0.1) 0%,
+      rgba(7,17,38,0.1) 55%,
+      rgba(7,17,38,0.1) 100%
+    ),
+    url("../img/BackgroundPlainCrop.png");
   background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
 }
+
+
 
 /* Optional: add some “sparkle” to match the mock */
 .heroBgImage:after{
@@ -521,4 +533,58 @@ h1{
 
 @media (max-width: 520px){
   .serviceRow{grid-template-columns: repeat(2, 1fr);}
+}
+
+.kicker{
+  font-size: clamp(11px, 1.1vw, 13px);
+  padding: clamp(6px, 0.8vw, 8px) clamp(10px, 1.2vw, 12px);
+}
+
+h1{
+  font-size: clamp(26px, 4.2vw, 56px);
+  line-height: 1.03;
+  margin: clamp(10px, 1.5vw, 14px) 0 clamp(8px, 1.2vw, 10px);
+}
+
+.sub{
+  font-size: clamp(13px, 1.3vw, 16px);
+  line-height: 1.55;
+  margin: 0 0 clamp(12px, 1.8vw, 18px);
+  max-width: 60ch;
+}
+
+.heroActions .btn{
+  padding: clamp(10px, 1.1vw, 12px) clamp(12px, 1.4vw, 16px);
+  border-radius: clamp(12px, 1.4vw, 14px);
+  font-size: clamp(13px, 1.1vw, 14.5px);
+}
+
+.heroAssurance{
+  font-size: clamp(12px, 1.1vw, 14px);
+  margin-top: clamp(10px, 1.3vw, 14px);
+}
+
+
+
+@media (max-width: 800px){
+  .heroDark{
+    height: 78vh;
+    min-height: 520px;
+    max-height: none;
+    padding: 56px 0 64px;
+  }
+
+  .heroBgImage{
+    background-position: center center;
+    background-size: auto 100%;
+  }
+
+  .heroGrid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .heroCopy{
+    max-width: 72ch;
+  }
 }
