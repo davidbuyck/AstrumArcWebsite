@@ -192,9 +192,9 @@ button{font:inherit}
   background:
     linear-gradient(
       180deg,
-      rgba(7,17,38,0.4) 0%,
-      rgba(7,17,38,0.4) 55%,
-      rgba(7,17,38,0.4) 100%
+      rgba(7,17,38,0.1) 0%,
+      rgba(7,17,38,0.1) 55%,
+      rgba(7,17,38,0.1) 100%
     ),
     url("../img/BackgroundPlainCrop.png");
   background-repeat: no-repeat;
@@ -209,8 +209,8 @@ button{font:inherit}
   content:"";
   position:absolute; inset:0;
   background:
-    radial-gradient(900px 420px at 65% 25%, rgba(59,130,246,0.3), transparent 60%),
-    radial-gradient(700px 520px at 20% 35%, rgba(147, 196, 253, 0.3), transparent 55%);
+    radial-gradient(900px 420px at 65% 25%, rgba(59,130,246,0.1), transparent 60%),
+    radial-gradient(700px 520px at 20% 35%, rgba(147, 196, 253, 0.1), transparent 55%);
   pointer-events:none;
 }
 
@@ -224,6 +224,28 @@ button{font:inherit}
 }
 
 .heroCopy{max-width: 620px;}
+
+.heroCopy{
+  position: relative;
+  z-index: 2;
+  padding: 18px 18px;
+  border-radius: 18px;
+}
+
+.heroCopy:before{
+  content:"";
+  position:absolute;
+  inset:-18px -240px -18px -24px;
+  border-radius: 22px;
+  background: linear-gradient(
+    90deg,
+    rgba(7,17,38,0.72) 0%,
+    rgba(7,17,38,0.58) 55%,
+    rgba(7,17,38,0.00) 100%
+  );
+  pointer-events:none;
+  z-index:-1;
+}
 
 .kicker{
   display:inline-flex; gap:10px; align-items:center;
@@ -572,7 +594,7 @@ h1{
 
 @media (max-width: 940px){
   .heroDark{
-    height: 78vh;
+    height: 0vh;
     min-height: 520px;
     max-height: none;
     padding: 56px 0 64px;
