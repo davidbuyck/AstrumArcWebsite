@@ -192,9 +192,9 @@ button{font:inherit}
   background:
     linear-gradient(
       180deg,
-      rgba(7,17,38,0.1) 0%,
-      rgba(7,17,38,0.1) 55%,
-      rgba(7,17,38,0.1) 100%
+      rgba(7,17,38,0.4) 0%,
+      rgba(7,17,38,0.4) 55%,
+      rgba(7,17,38,0.4) 100%
     ),
     url("../img/BackgroundPlainCrop.png");
   background-repeat: no-repeat;
@@ -209,8 +209,8 @@ button{font:inherit}
   content:"";
   position:absolute; inset:0;
   background:
-    radial-gradient(900px 420px at 65% 25%, rgba(59,130,246,0.22), transparent 60%),
-    radial-gradient(700px 520px at 20% 35%, rgba(147,197,253,0.10), transparent 55%);
+    radial-gradient(900px 420px at 65% 25%, rgba(59,130,246,0.3), transparent 60%),
+    radial-gradient(700px 520px at 20% 35%, rgba(147, 196, 253, 0.3), transparent 55%);
   pointer-events:none;
 }
 
@@ -249,6 +249,10 @@ h1{
   letter-spacing: -1.1px;
 }
 .heroDark h1 .em{color: var(--accent3);}
+
+.heroDark h1{
+  color: var(--textLight);
+}
 
 .sub{
   margin: 0 0 18px;
@@ -566,7 +570,7 @@ h1{
 
 
 
-@media (max-width: 800px){
+@media (max-width: 940px){
   .heroDark{
     height: 78vh;
     min-height: 520px;
@@ -588,3 +592,4 @@ h1{
     max-width: 72ch;
   }
 }
+
