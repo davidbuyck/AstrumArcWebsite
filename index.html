@@ -8,621 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg0:#070b16;
-      --bg1:#0b1430;
-      --bg2:#0b1b3f;
-      --card:#0f1b3a;
-      --card2:#0e1631;
-      --txt:#e8eefc;
-      --muted:#b7c2e1;
-      --muted2:#90a0c9;
-      --line:rgba(255,255,255,.10);
-      --line2:rgba(255,255,255,.14);
-      --accent:#3b82f6;
-      --accent2:#60a5fa;
-      --accent3:#93c5fd;
-      --good:#22c55e;
-      --shadow: 0 14px 45px rgba(0,0,0,.45);
-      --shadow2: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 18px;
-      --radius2: 22px;
-      --max: 1140px;
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--txt);
-      background:
-        radial-gradient(1200px 600px at 70% 10%, rgba(59,130,246,.35), transparent 60%),
-        radial-gradient(900px 600px at 20% 20%, rgba(147,197,253,.18), transparent 55%),
-        radial-gradient(1200px 800px at 50% 0%, rgba(96,165,250,.18), transparent 65%),
-        linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, #0a1025 100%);
-      overflow-x:hidden;
-    }
-
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    button{font:inherit}
-
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
-    .topbar{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(12px);
-      background: rgba(7,11,22,.55);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      height:72px;
-      gap:18px;
-    }
-
-    .brand{
-      display:flex; align-items:center; gap:10px; min-width:180px;
-    }
-    .logo{
-      width:34px; height:34px; border-radius:11px;
-      background:
-        radial-gradient(12px 12px at 30% 35%, rgba(255,255,255,.9), transparent 60%),
-        conic-gradient(from 210deg, #ff7a18, #af002d 35%, #319197 75%, #3b82f6);
-      box-shadow: 0 10px 25px rgba(0,0,0,.35);
-    }
-    .brand .name{
-      font-weight:800; letter-spacing:.2px;
-    }
-
-    .navlinks{
-      display:flex; align-items:center; gap:18px;
-    }
-    .navlinks a{
-      font-weight:600;
-      color:rgba(232,238,252,.92);
-      padding:10px 10px;
-      border-radius:12px;
-      transition: background .2s ease, color .2s ease, transform .2s ease;
-    }
-    .navlinks a:hover{
-      background: rgba(255,255,255,.06);
-      transform: translateY(-1px);
-    }
-
-    .navcta{
-      display:flex; align-items:center; gap:10px;
-      min-width:180px; justify-content:flex-end;
-    }
-
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:12px 16px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: var(--txt);
-      font-weight: 700;
-      letter-spacing:.1px;
-      box-shadow: 0 10px 24px rgba(0,0,0,.25);
-      cursor:pointer;
-      transition: transform .16s ease, background .16s ease, border-color .16s ease, box-shadow .16s ease;
-      user-select:none;
-      white-space:nowrap;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      background: rgba(255,255,255,.085);
-      border-color: rgba(255,255,255,.22);
-      box-shadow: 0 16px 36px rgba(0,0,0,.35);
-    }
-    .btn.primary{
-      background: linear-gradient(180deg, rgba(96,165,250,.98), rgba(59,130,246,.98));
-      border-color: rgba(255,255,255,.18);
-      color:#06102a;
-    }
-    .btn.primary:hover{
-      background: linear-gradient(180deg, rgba(147,197,253,.98), rgba(59,130,246,.98));
-    }
-    .btn.ghost{
-      background: rgba(255,255,255,.03);
-      border-color: rgba(255,255,255,.12);
-    }
-
-    .hamburger{
-      display:none;
-      width:44px;height:44px;border-radius:14px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      cursor:pointer;
-      align-items:center;justify-content:center;
-    }
-    .hamburger span{
-      width:18px;height:2px;background:rgba(232,238,252,.9);display:block;position:relative;
-    }
-    .hamburger span:before,.hamburger span:after{
-      content:""; position:absolute; left:0;
-      width:18px;height:2px;background:rgba(232,238,252,.9);
-    }
-    .hamburger span:before{ top:-6px;}
-    .hamburger span:after{ top:6px;}
-
-    .mobilemenu{
-      display:none;
-      border-top: 1px solid var(--line);
-      padding: 12px 0 16px;
-    }
-    .mobilemenu a{
-      display:block;
-      padding: 12px 10px;
-      border-radius: 12px;
-      color: rgba(232,238,252,.94);
-      font-weight: 650;
-    }
-    .mobilemenu a:hover{
-      background: rgba(255,255,255,.06);
-    }
-    .mobilemenu .row{
-      display:flex; gap:10px; padding: 10px 10px 0;
-    }
-
-    .hero{
-      position:relative;
-      padding: 56px 0 26px;
-    }
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 28px;
-      align-items:center;
-    }
-
-    .kicker{
-      display:inline-flex; gap:10px; align-items:center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.05);
-      color: rgba(232,238,252,.92);
-      font-weight: 650;
-      font-size: 13px;
-      letter-spacing: .2px;
-    }
-    .dot{
-      width:8px;height:8px;border-radius:50%;
-      background: radial-gradient(circle at 30% 30%, #fff, var(--accent));
-      box-shadow: 0 0 16px rgba(59,130,246,.6);
-    }
-
-    h1{
-      margin: 14px 0 10px;
-      font-size: clamp(34px, 4.2vw, 56px);
-      line-height: 1.02;
-      letter-spacing: -1.1px;
-    }
-    .hero h1 .em{
-      color: var(--accent3);
-    }
-    .sub{
-      margin: 0 0 18px;
-      color: rgba(183,194,225,.95);
-      font-size: 16px;
-      line-height: 1.55;
-      max-width: 58ch;
-    }
-    .heroActions{
-      display:flex; gap:12px; flex-wrap:wrap;
-      margin: 18px 0 0;
-    }
-
-    .visual{
-      position:relative;
-      border-radius: var(--radius2);
-      border: 1px solid rgba(255,255,255,.14);
-      background:
-        radial-gradient(600px 300px at 30% 20%, rgba(96,165,250,.22), transparent 55%),
-        radial-gradient(400px 260px at 70% 55%, rgba(59,130,246,.22), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      min-height: 320px;
-    }
-    .screen{
-      position:absolute; inset: 22px 22px 22px 22px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.14);
-      background:
-        radial-gradient(480px 240px at 50% 0%, rgba(147,197,253,.18), transparent 55%),
-        linear-gradient(180deg, rgba(8,15,36,.92), rgba(6,10,22,.92));
-      box-shadow: 0 14px 40px rgba(0,0,0,.45);
-      overflow:hidden;
-    }
-    .screenTop{
-      height: 38px;
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 0 12px;
-      border-bottom: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-    }
-    .dots{display:flex;gap:7px}
-    .dots i{
-      width:9px;height:9px;border-radius:50%;
-      background: rgba(255,255,255,.18);
-    }
-    .screenTop .mini{
-      display:flex;gap:8px; align-items:center;
-      color: rgba(183,194,225,.9);
-      font-weight:650;
-      font-size: 12px;
-    }
-    .chip{
-      padding: 5px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-    }
-
-    .screenBody{
-      position:relative;
-      padding: 16px;
-      height: calc(100% - 38px);
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      align-items:stretch;
-    }
-    .panel{
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      overflow:hidden;
-      position:relative;
-    }
-    .panel .ptitle{
-      padding: 10px 12px;
-      font-weight: 750;
-      color: rgba(232,238,252,.92);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.03);
-      font-size: 13px;
-    }
-    .panel .pbody{
-      padding: 10px 12px 12px;
-      height: calc(100% - 38px);
-      position:relative;
-    }
-    .bars{
-      display:flex; align-items:flex-end; gap:6px; height: 120px;
-      padding-top: 14px;
-    }
-    .bars span{
-      width: 12px;
-      border-radius: 8px 8px 3px 3px;
-      background: linear-gradient(180deg, rgba(147,197,253,.95), rgba(59,130,246,.75));
-      opacity:.9;
-      transform-origin: bottom;
-      animation: grow 2.4s ease-in-out infinite alternate;
-    }
-    .bars span:nth-child(2){animation-delay:.15s}
-    .bars span:nth-child(3){animation-delay:.3s}
-    .bars span:nth-child(4){animation-delay:.45s}
-    .bars span:nth-child(5){animation-delay:.6s}
-    .bars span:nth-child(6){animation-delay:.75s}
-    .bars span:nth-child(7){animation-delay:.9s}
-    .bars span:nth-child(8){animation-delay:1.05s}
-
-    @keyframes grow{
-      from{transform:scaleY(.65); filter:saturate(1)}
-      to{transform:scaleY(1.05); filter:saturate(1.1)}
-    }
-
-    .brain{
-      position:absolute;
-      inset: 0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .brain svg{
-      width: 92%;
-      height: 92%;
-      opacity: .95;
-      filter: drop-shadow(0 14px 28px rgba(0,0,0,.55));
-    }
-
-    .streaks{
-      position:absolute;
-      left:-20%;
-      top: 62px;
-      width: 140%;
-      height: 140px;
-      pointer-events:none;
-      opacity:.9;
-      filter: blur(0px);
-      transform: rotate(-4deg);
-    }
-    .streaks:before{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        radial-gradient(120px 16px at 20% 40%, rgba(96,165,250,.0), rgba(96,165,250,.0) 40%, rgba(96,165,250,.35) 70%, transparent 78%),
-        radial-gradient(120px 16px at 34% 62%, rgba(147,197,253,.0), rgba(147,197,253,.0) 40%, rgba(147,197,253,.28) 70%, transparent 78%),
-        radial-gradient(220px 18px at 60% 55%, rgba(255,122,24,.0), rgba(255,122,24,.0) 45%, rgba(255,122,24,.28) 72%, transparent 80%),
-        radial-gradient(220px 18px at 76% 40%, rgba(175,0,45,.0), rgba(175,0,45,.0) 45%, rgba(175,0,45,.22) 72%, transparent 80%);
-      animation: drift 8s linear infinite;
-      opacity:.85;
-    }
-    @keyframes drift{
-      from{transform:translateX(-6%)}
-      to{transform:translateX(6%)}
-    }
-
-    .section{
-      padding: 26px 0;
-    }
-
-    .services{
-      margin-top: 16px;
-      border-radius: var(--radius2);
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      box-shadow: var(--shadow2);
-      overflow:hidden;
-    }
-    .serviceRow{
-      display:grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 0;
-    }
-    .service{
-      padding: 18px 14px;
-      border-right: 1px solid rgba(255,255,255,.08);
-      cursor:pointer;
-      transition: background .16s ease, transform .16s ease;
-      min-height: 120px;
-    }
-    .service:last-child{border-right:none}
-    .service:hover{
-      background: rgba(255,255,255,.05);
-      transform: translateY(-1px);
-    }
-    .sicon{
-      width:42px;height:42px;border-radius:14px;
-      display:grid;place-items:center;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.04);
-      margin-bottom: 10px;
-    }
-    .sname{
-      font-weight: 800;
-      font-size: 14px;
-      margin-bottom: 6px;
-    }
-    .sdesc{
-      font-size: 12.5px;
-      color: rgba(183,194,225,.92);
-      line-height: 1.35;
-    }
-
-    .midTitle{
-      text-align:center;
-      margin: 36px 0 10px;
-      font-size: clamp(22px, 2.2vw, 30px);
-      letter-spacing:-.6px;
-    }
-    .midSub{
-      text-align:center;
-      margin:0 auto 20px;
-      max-width: 72ch;
-      color: rgba(183,194,225,.92);
-      line-height:1.55;
-      font-size: 14.5px;
-    }
-
-    .cards3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 14px;
-    }
-    .card{
-      border-radius: var(--radius2);
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      overflow:hidden;
-      box-shadow: var(--shadow2);
-      transition: transform .16s ease, background .16s ease, border-color .16s ease;
-    }
-    .card:hover{
-      transform: translateY(-2px);
-      background: rgba(255,255,255,.05);
-      border-color: rgba(255,255,255,.18);
-    }
-    .thumb{
-      height: 154px;
-      background:
-        radial-gradient(240px 120px at 70% 30%, rgba(96,165,250,.25), transparent 60%),
-        radial-gradient(220px 160px at 20% 70%, rgba(255,122,24,.18), transparent 65%),
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border-bottom: 1px solid rgba(255,255,255,.10);
-      position:relative;
-    }
-    .thumb:after{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        linear-gradient(90deg, transparent, rgba(255,255,255,.06), transparent);
-      opacity:.35;
-      transform: translateX(-40%);
-      animation: sheen 5.2s ease-in-out infinite;
-    }
-    @keyframes sheen{
-      0%{transform:translateX(-60%)}
-      45%{transform:translateX(60%)}
-      100%{transform:translateX(60%)}
-    }
-    .cardBody{
-      padding: 14px 14px 16px;
-    }
-    .cardTitle{
-      font-weight: 850;
-      margin: 0 0 6px;
-      letter-spacing: -.2px;
-    }
-    .cardText{
-      margin:0 0 12px;
-      color: rgba(183,194,225,.92);
-      font-size: 13px;
-      line-height:1.45;
-    }
-    .miniCta{
-      display:inline-flex; align-items:center; gap:8px;
-      font-weight: 800;
-      color: rgba(147,197,253,.95);
-      font-size: 13px;
-    }
-    .arrow{
-      width:18px;height:18px;border-radius:8px;
-      display:grid; place-items:center;
-      border:1px solid rgba(147,197,253,.30);
-      background: rgba(59,130,246,.15);
-    }
-
-    .storiesTitle{
-      text-align:center;
-      margin: 34px 0 14px;
-      font-size: 22px;
-      letter-spacing:-.4px;
-    }
-
-    .ctaBand{
-      margin: 34px 0 56px;
-      border-radius: 26px;
-      border: 1px solid rgba(255,255,255,.12);
-      background:
-        radial-gradient(700px 240px at 35% 0%, rgba(96,165,250,.26), transparent 62%),
-        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-      padding: 26px 18px;
-      text-align:center;
-      box-shadow: var(--shadow2);
-    }
-    .ctaBand h3{
-      margin: 0 0 8px;
-      font-size: 24px;
-      letter-spacing:-.5px;
-    }
-    .ctaBand p{
-      margin: 0 auto 16px;
-      max-width: 70ch;
-      color: rgba(183,194,225,.92);
-      line-height: 1.55;
-      font-size: 14.5px;
-    }
-
-    footer{
-      border-top: 1px solid var(--line);
-      background: rgba(7,11,22,.45);
-      padding: 20px 0 34px;
-      color: rgba(183,194,225,.9);
-    }
-    .foot{
-      display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
-      align-items:center;
-    }
-    .foot small{opacity:.9}
-    .foot .links{display:flex; gap:14px; flex-wrap:wrap}
-    .foot .links a{opacity:.9}
-    .foot .links a:hover{opacity:1}
-
-    .modal{
-      position:fixed; inset:0;
-      background: rgba(0,0,0,.62);
-      display:none;
-      align-items:center; justify-content:center;
-      padding: 18px;
-      z-index: 80;
-    }
-    .modal.open{display:flex}
-    .modalCard{
-      width:min(760px, 100%);
-      border-radius: 22px;
-      border:1px solid rgba(255,255,255,.14);
-      background:
-        radial-gradient(700px 320px at 30% 0%, rgba(96,165,250,.22), transparent 62%),
-        linear-gradient(180deg, rgba(10,18,40,.96), rgba(7,11,22,.96));
-      box-shadow: 0 30px 90px rgba(0,0,0,.65);
-      overflow:hidden;
-    }
-    .modalHead{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 14px 14px 12px;
-      border-bottom:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-    }
-    .modalHead .mtitle{
-      font-weight: 850;
-      letter-spacing:-.2px;
-    }
-    .xbtn{
-      width:40px;height:40px;border-radius:14px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.05);
-      cursor:pointer;
-    }
-    .xbtn:hover{background: rgba(255,255,255,.08)}
-    .modalBody{
-      padding: 16px 16px 18px;
-      color: rgba(232,238,252,.94);
-      line-height: 1.55;
-    }
-    .modalGrid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-top: 12px;
-    }
-    .mblock{
-      border-radius: 18px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      padding: 12px 12px;
-    }
-    .mblock .h{
-      font-weight: 850;
-      margin-bottom: 6px;
-      letter-spacing:-.15px;
-    }
-    .mblock .t{
-      color: rgba(183,194,225,.92);
-      font-size: 13.5px;
-    }
-
-    @media (max-width: 980px){
-      .heroGrid{grid-template-columns: 1fr; gap: 16px;}
-      .visual{min-height: 360px;}
-      .serviceRow{grid-template-columns: repeat(3, 1fr);}
-      .cards3{grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 860px){
-      .navlinks{display:none}
-      .hamburger{display:flex}
-    }
-
-    @media (max-width: 520px){
-      .serviceRow{grid-template-columns: repeat(2, 1fr);}
-      .screenBody{grid-template-columns: 1fr; }
-      .visual{min-height: 420px;}
-    }
-
-    .sr-only{
-      position:absolute;
-      width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
-      clip:rect(0,0,0,0);white-space:nowrap;border:0;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
@@ -665,10 +51,10 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="heroDark heroBgImage">
       <div class="wrap">
         <div class="heroGrid">
-          <div>
+          <div class="heroCopy">
             <div class="kicker"><span class="dot"></span> Modern software systems, built for real-world workflows</div>
             <h1>Advanced Software Solutions<br><span class="em">for Visualization, Analytics & Automation.</span></h1>
             <p class="sub">
@@ -682,76 +68,21 @@
             </div>
           </div>
 
-          <div class="visual" aria-label="Product preview">
-            <div class="streaks" aria-hidden="true"></div>
-            <div class="screen">
-              <div class="screenTop">
-                <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
-                <div class="mini">
-                  <span class="chip">Dashboards</span>
-                  <span class="chip">AI</span>
-                  <span class="chip">3D</span>
-                </div>
-              </div>
-              <div class="screenBody">
-                <div class="panel">
-                  <div class="ptitle">Analytics</div>
-                  <div class="pbody">
-                    <div class="bars" aria-hidden="true">
-                      <span style="height:36%"></span>
-                      <span style="height:55%"></span>
-                      <span style="height:42%"></span>
-                      <span style="height:74%"></span>
-                      <span style="height:61%"></span>
-                      <span style="height:84%"></span>
-                      <span style="height:58%"></span>
-                      <span style="height:72%"></span>
-                    </div>
-                    <div style="margin-top:12px;color:rgba(183,194,225,.9);font-size:12.5px;line-height:1.35">
-                      Real-time + historical insights, trend detection, and human-friendly UI.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel">
-                  <div class="ptitle">Intelligent Systems</div>
-                  <div class="pbody">
-                    <div class="brain" aria-hidden="true">
-                      <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <linearGradient id="g1" x1="80" y1="120" x2="440" y2="420" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#93C5FD" stop-opacity="0.95"/>
-                            <stop offset="1" stop-color="#3B82F6" stop-opacity="0.75"/>
-                          </linearGradient>
-                          <radialGradient id="g2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(360 210) rotate(135) scale(190 160)">
-                            <stop stop-color="#FF7A18" stop-opacity="0.55"/>
-                            <stop offset="1" stop-color="#AF002D" stop-opacity="0"/>
-                          </radialGradient>
-                        </defs>
-                        <path d="M204 94c-58 0-105 47-105 105 0 23 7 44 20 62-18 16-29 40-29 66 0 46 34 85 79 92 16 44 58 75 107 75h28c58 0 105-47 105-105 0-16-3-31-9-45 20-18 33-45 33-74 0-44-29-81-69-93-12-51-58-90-114-90h-46Z"
-                              fill="url(#g1)" opacity="0.95"/>
-                        <path d="M330 146c54 36 74 93 48 149 38-32 52-87 31-136-18-44-51-66-79-78Z"
-                              fill="url(#g2)"/>
-                        <path d="M154 188c20-26 52-42 86-42m-22 62c16-14 38-22 62-22m-112 74c20-18 46-29 74-29m-82 78c24-18 54-28 86-28m-46 96c20-10 42-16 66-16"
-                              stroke="rgba(255,255,255,.22)" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
-                      </svg>
-                    </div>
-                    <div style="position:absolute;left:12px;right:12px;bottom:12px;color:rgba(183,194,225,.9);font-size:12.5px;line-height:1.35">
-                      AI/ML integration, automation pipelines, evaluation, and product-grade deployment.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="heroVisual">
+            <img class="monitorImg" src="img/hero-monitor.png" alt="AstrumArc product visualization preview on a monitor" />
           </div>
         </div>
+      </div>
+    </section>
 
+    <div class="pageLight">
+      <div class="wrap">
         <div class="services section" id="services">
           <div class="serviceRow">
             <div class="service" data-modal="analytics">
               <div class="sicon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 19V5M9 19V10M14 19V7M19 19V13" stroke="rgba(147,197,253,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M4 19V5M9 19V10M14 19V7M19 19V13" stroke="rgba(47,111,227,.95)" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <div class="sname">Data Analytics</div>
@@ -761,7 +92,7 @@
             <div class="service" data-modal="viz">
               <div class="sicon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 7h16M6 11h12M8 15h8M10 19h4" stroke="rgba(147,197,253,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M4 7h16M6 11h12M8 15h8M10 19h4" stroke="rgba(47,111,227,.95)" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <div class="sname">3D Visualization</div>
@@ -771,7 +102,7 @@
             <div class="service" data-modal="ai">
               <div class="sicon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path d="M8 7v10M16 7v10M6 9h12M6 15h12" stroke="rgba(147,197,253,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8 7v10M16 7v10M6 9h12M6 15h12" stroke="rgba(47,111,227,.95)" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <div class="sname">AI & ML</div>
@@ -781,7 +112,7 @@
             <div class="service" data-modal="auto">
               <div class="sicon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 3v3M12 18v3M4.2 7.2l2.1 2.1M17.7 14.7l2.1 2.1M3 12h3M18 12h3M4.2 16.8l2.1-2.1M17.7 9.3l2.1-2.1" stroke="rgba(147,197,253,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 3v3M12 18v3M4.2 7.2l2.1 2.1M17.7 14.7l2.1 2.1M3 12h3M18 12h3M4.2 16.8l2.1-2.1M17.7 9.3l2.1-2.1" stroke="rgba(47,111,227,.95)" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <div class="sname">Automation</div>
@@ -791,8 +122,8 @@
             <div class="service" data-modal="web">
               <div class="sicon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 6h16v12H4z" stroke="rgba(147,197,253,.95)" stroke-width="2"/>
-                  <path d="M4 10h16" stroke="rgba(147,197,253,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M4 6h16v12H4z" stroke="rgba(47,111,227,.95)" stroke-width="2"/>
+                  <path d="M4 10h16" stroke="rgba(47,111,227,.95)" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <div class="sname">Web Development</div>
@@ -802,8 +133,8 @@
             <div class="service" data-modal="xr">
               <div class="sicon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 12c2-5 14-5 16 0" stroke="rgba(147,197,253,.95)" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M6 12c1 3 3 5 6 5s5-2 6-5" stroke="rgba(147,197,253,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M4 12c2-5 14-5 16 0" stroke="rgba(47,111,227,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6 12c1 3 3 5 6 5s5-2 6-5" stroke="rgba(47,111,227,.95)" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <div class="sname">XR & Simulation</div>
@@ -884,24 +215,9 @@
             AstrumArc uses modern, automation-first engineering workflows to prototype quickly and ship reliable software—without sacrificing maintainability.
           </p>
           <div class="cards3">
-            <div class="card">
-              <div class="cardBody">
-                <div class="cardTitle">Discovery → Prototype</div>
-                <p class="cardText">Tight feedback loops. Visible progress. Clear scope and measurable milestones.</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="cardBody">
-                <div class="cardTitle">Build → Validate</div>
-                <p class="cardText">Testing, performance profiling, and UX iteration built into the process.</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="cardBody">
-                <div class="cardTitle">Deploy → Support</div>
-                <p class="cardText">Packaging, CI/CD, documentation, and handoff that teams can actually maintain.</p>
-              </div>
-            </div>
+            <div class="card"><div class="cardBody"><div class="cardTitle">Discovery → Prototype</div><p class="cardText">Tight feedback loops. Visible progress. Clear scope and milestones.</p></div></div>
+            <div class="card"><div class="cardBody"><div class="cardTitle">Build → Validate</div><p class="cardText">Testing, performance profiling, and UX iteration built into the process.</p></div></div>
+            <div class="card"><div class="cardBody"><div class="cardTitle">Deploy → Support</div><p class="cardText">Packaging, CI/CD, documentation, and handoff teams can maintain.</p></div></div>
           </div>
         </section>
 
@@ -915,32 +231,30 @@
         <section class="ctaBand" id="contact">
           <h3>Let’s Build Your Next Great Solution</h3>
           <p>Tell us what you’re trying to build. If it involves complex data, visualization, automation, or AI—AstrumArc will make it real.</p>
-          <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+          <div class="ctaActions">
             <a class="btn primary" href="mailto:hello@astrumarc.com?subject=AstrumArc%20Project%20Inquiry">Get Started</a>
             <a class="btn ghost" href="#services">See Capabilities</a>
           </div>
-          <p style="margin-top:14px;font-size:12.5px;color:rgba(183,194,225,.88)">
-            Replace the email link with your real contact method (form, booking link, etc.).
-          </p>
+          <p class="ctaNote">Replace the email link with your real contact method (form, booking link, etc.).</p>
         </section>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="wrap">
-      <div class="foot">
-        <small>© <span id="year"></span> AstrumArc. All rights reserved.</small>
-        <div class="links">
-          <a href="#services">Services</a>
-          <a href="#medical">Medical</a>
-          <a href="#work">Work</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
+      <footer class="footerLight">
+        <div class="wrap">
+          <div class="foot">
+            <small>© <span id="year"></span> AstrumArc. All rights reserved.</small>
+            <div class="links">
+              <a href="#services">Services</a>
+              <a href="#medical">Medical</a>
+              <a href="#work">Work</a>
+              <a href="#process">Process</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
-  </footer>
+  </main>
 
   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modalCard">
@@ -952,135 +266,6 @@
     </div>
   </div>
 
-  <script>
-    const yearEl = document.getElementById("year")
-    yearEl.textContent = new Date().getFullYear()
-
-    const hamburger = document.getElementById("hamburger")
-    const mobilemenu = document.getElementById("mobilemenu")
-
-    const setMobileOpen = (open) => {
-      mobilemenu.style.display = open ? "block" : "none"
-      hamburger.setAttribute("aria-expanded", open ? "true" : "false")
-    }
-
-    hamburger.addEventListener("click", () => {
-      const open = mobilemenu.style.display === "block"
-      setMobileOpen(!open)
-    })
-
-    mobilemenu.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => setMobileOpen(false))
-    })
-
-    const modal = document.getElementById("modal")
-    const closeModalBtn = document.getElementById("closeModal")
-    const modalTitle = document.getElementById("modalTitle")
-    const modalBody = document.getElementById("modalBody")
-
-    const serviceContent = {
-      analytics: {
-        title: "Data Analytics",
-        bullets: [
-          ["What we deliver", "Dashboards, KPI design, data pipelines, and interactive reporting."],
-          ["Good for", "Operations visibility, product metrics, forecasting, and decision support."],
-          ["Tech", "APIs, ETL, warehousing, streaming, secure access patterns."]
-        ]
-      },
-      viz: {
-        title: "3D Visualization",
-        bullets: [
-          ["What we deliver", "Interactive 3D tools, scientific visualization, WebGL, and performance rendering."],
-          ["Good for", "Complex spatial data, digital twins, training, and exploratory analysis."],
-          ["Tech", "Unity, WebGL, GPU optimization, UX for 3D workflows."]
-        ]
-      },
-      ai: {
-        title: "AI & Machine Learning",
-        bullets: [
-          ["What we deliver", "Model integration, inference pipelines, evaluation, and product UI."],
-          ["Good for", "Automation, classification, recommendations, and intelligent assistance."],
-          ["Tech", "Python stacks, deployment patterns, monitoring + guardrails."]
-        ]
-      },
-      auto: {
-        title: "Process Automation",
-        bullets: [
-          ["What we deliver", "Workflow tools, integrations, orchestration, and CI/CD automation."],
-          ["Good for", "Reducing manual steps, speeding releases, and improving reliability."],
-          ["Tech", "Build/test/release automation, internal platforms, API integrations."]
-        ]
-      },
-      web: {
-        title: "Web Development",
-        bullets: [
-          ["What we deliver", "Marketing sites, web apps, portals, admin tooling, and modern UI."],
-          ["Good for", "Client-facing products, internal operations tools, and dashboards."],
-          ["Tech", "Modern frontend + backend, auth, performance, maintainability."]
-        ]
-      },
-      xr: {
-        title: "XR & Simulation",
-        bullets: [
-          ["What we deliver", "Training simulators, real-time interaction, and procedure-oriented UX."],
-          ["Good for", "Education, rehearsal, skill transfer, and spatial workflows."],
-          ["Tech", "Physics interaction, device integration, cross-platform builds."]
-        ]
-      }
-    }
-
-    const openModal = (key) => {
-      const c = serviceContent[key]
-      if (!c) return
-      modalTitle.textContent = c.title
-      modalBody.innerHTML = `
-        <div>${c.title} capabilities designed for clear outcomes and real users.</div>
-        <div class="modalGrid">
-          ${c.bullets.map(b => `
-            <div class="mblock">
-              <div class="h">${b[0]}</div>
-              <div class="t">${b[1]}</div>
-            </div>
-          `).join("")}
-        </div>
-        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn primary" href="#contact">Talk About a Project</a>
-          <a class="btn ghost" href="#services">Back to Services</a>
-        </div>
-      `
-      modal.classList.add("open")
-      document.body.style.overflow = "hidden"
-    }
-
-    const closeModal = () => {
-      modal.classList.remove("open")
-      document.body.style.overflow = ""
-    }
-
-    document.querySelectorAll(".service").forEach(el => {
-      el.addEventListener("click", () => openModal(el.dataset.modal))
-      el.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") openModal(el.dataset.modal)
-      })
-      el.setAttribute("tabindex", "0")
-      el.setAttribute("role", "button")
-      el.setAttribute("aria-label", "Open service details")
-    })
-
-    closeModalBtn.addEventListener("click", closeModal)
-    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal() })
-    window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal() })
-
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener("click", (e) => {
-        const id = a.getAttribute("href").slice(1)
-        const target = document.getElementById(id)
-        if (!target) return
-        e.preventDefault()
-        target.scrollIntoView({ behavior: "smooth", block: "start" })
-        history.replaceState(null, "", "#" + id)
-      })
-    })
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
