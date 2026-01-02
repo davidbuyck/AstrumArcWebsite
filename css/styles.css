@@ -333,7 +333,8 @@ h1{
   border-color: rgba(15, 23, 42, 0.16);
 }
 .thumb{
-  height: 154px;
+  aspect-ratio: 5 / 4;
+  width: 100%;
   position: relative;
   background-size: cover;
   background-position: center;
