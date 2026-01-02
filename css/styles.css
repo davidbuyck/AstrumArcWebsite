@@ -251,6 +251,12 @@ h1{
   margin: 18px 0 0;
 }
 
+.heroAssurance{
+  margin-top: 14px;
+  color: rgba(232,238,252,.82);
+  font-size: 14px;
+}
+
 /* Monitor image positioning */
 .heroVisual{
   display:flex;
