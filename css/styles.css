@@ -52,8 +52,18 @@ button{font:inherit}
 }
 
 .brand{
-  display:flex; align-items:center; gap:10px; min-width:180px;
+  display:flex;
+  align-items:center;
+  height:100%;
 }
+
+.brandLogo{
+  height:85%;
+  width:auto;
+  display:block;
+}
+
+
 .logo{
   width:34px; height:34px; border-radius:11px;
   background:
