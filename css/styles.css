@@ -395,16 +395,7 @@ h1{
 }
 
 /* soft dark overlay for readability */
-.thumb::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(
-    180deg,
-    rgba(7,17,38,0.15),
-    rgba(7,17,38,0.45)
-  );
-}
+
 .cardBody{padding: 14px 14px 16px;}
 .cardTitle{font-weight: 900; margin:0 0 6px; color: var(--textDark);}
 .cardText{margin:0 0 12px; color: var(--textMuted); font-size:13px; line-height:1.45;}
