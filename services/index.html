@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AstrumArc | Services</title>
+  <meta name="description" content="AstrumArc services: visualization, analytics, automation, AI/ML, web systems, and XR simulation—built as production-grade software with fast iteration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="../index.html">
+          <img src="../img/LogoAlpha.png" alt="AstrumArc Home" class="brandLogo" />
+        </a>
+
+        <nav class="navlinks" aria-label="Primary">
+          <a class="active" href="/services/">Services</a>
+          <a href="/products/">Products</a>
+          <a href="/process/">Process</a>
+          <a href="/about/">About</a>
+        </nav>
+
+        <div class="navcta">
+          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+          </button>
+          <a class="btn primary" href="#contact">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="mobilemenu" id="mobilemenu" aria-label="Mobile menu">
+        <a class="active" href="/services/">Services</a>
+        <a href="/products/">Products</a>
+        <a href="/process/">Process</a>
+        <a href="/about/">About</a>
+        <div class="row">
+          <a class="btn ghost" style="flex:1" href="#services">Explore Services</a>
+          <a class="btn primary" style="flex:1" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="heroDark heroBgServices">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div class="heroCopy">
+            <div class="kicker"><span class="dot"></span> Services built as real systems, not buzzwords</div>
+            <h1>Services that turn complex work into<br><span class="em">production-grade software.</span></h1>
+            <p class="sub">
+              AstrumArc builds advanced software for teams who deal with real constraints: performance, correctness,
+              usability, and messy reality. These are capability areas, expressed as deliverables you can actually ship.
+            </p>
+
+            <div class="heroActions">
+              <a class="btn primary" href="#contact">Book a Consultation</a>
+              <a class="btn ghost" href="#services">Explore Services</a>
+            </div>
+
+            <div class="heroAssurance">
+              You bring the problem. We build a working system, fast.
+            </div>
+          </div>
+
+          <div class="heroVisual">
+            <img class="monitorImg" src="../img/HeartMonitor.png" alt="AstrumArc visualization on a monitor" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pageLight">
+      <div class="wrap">
+        <section class="section" id="services">
+          <div class="servicesIntro">
+            <h2 class="sectionTitle">Core Service Areas</h2>
+            <p class="sectionSub">
+              Most engagements combine multiple areas into one coherent system. Click any card to see typical deliverables.
+            </p>
+          </div>
+
+          <div class="serviceCards">
+            <div class="svcCard service" data-modal="analytics">
+              <div class="svcIcon">
+                <img src="/img/icons/DataAnalytics2.png" alt="Data Analytics icon">
+              </div>
+              <div class="svcHead">
+                <div class="svcTitle">Data Analytics & Decision Support</div>
+                <div class="svcDesc">Dashboards, metrics, pipelines, and decision tooling designed for clarity.</div>
+              </div>
+              <div class="svcListTitle">Typical outcomes</div>
+              <ul class="svcList">
+                <li>Interactive dashboards and custom viewers</li>
+                <li>Domain-specific metrics and derived signals</li>
+                <li>Data pipelines, validation, and monitoring</li>
+              </ul>
+            </div>
+
+            <div class="svcCard service" data-modal="viz">
+              <div class="svcIcon">
+                <img src="/img/icons/3DVisualization2.png" alt="3D Visualization icon">
+              </div>
+              <div class="svcHead">
+                <div class="svcTitle">Interactive 3D Visualization</div>
+                <div class="svcDesc">Real-time tools for spatial, temporal, and high-dimensional data.</div>
+              </div>
+              <div class="svcListTitle">Typical outcomes</div>
+              <ul class="svcList">
+                <li>High-performance 3D viewers and interaction</li>
+                <li>WebGL or desktop visualization applications</li>
+                <li>Rendering + UX built for real workflows</li>
+              </ul>
+            </div>
+
+            <div class="svcCard service" data-modal="ai">
+              <div class="svcIcon">
+                <img src="/img/icons/AI2.png" alt="AI icon">
+              </div>
+              <div class="svcHead">
+                <div class="svcTitle">AI & Machine Learning Integration</div>
+                <div class="svcDesc">Model integration and evaluation that improves workflows without hiding truth.</div>
+              </div>
+              <div class="svcListTitle">Typical outcomes</div>
+              <ul class="svcList">
+                <li>Inference pipelines and product integration</li>
+                <li>Evaluation tooling and model monitoring</li>
+                <li>Trustworthy UI patterns for AI outputs</li>
+              </ul>
+            </div>
+
+            <div class="svcCard service" data-modal="auto">
+              <div class="svcIcon">
+                <img src="/img/icons/Automation2.png" alt="Automation icon">
+              </div>
+              <div class="svcHead">
+                <div class="svcTitle">Automation & Workflow Systems</div>
+                <div class="svcDesc">Reduce manual steps. Improve reliability. Ship faster with fewer failures.</div>
+              </div>
+              <div class="svcListTitle">Typical outcomes</div>
+              <ul class="svcList">
+                <li>Internal tooling and orchestration systems</li>
+                <li>CI/CD pipelines and release automation</li>
+                <li>Integrations across services and teams</li>
+              </ul>
+            </div>
+
+            <div class="svcCard service" data-modal="web">
+              <div class="svcIcon">
+                <img src="/img/icons/WebDev2.png" alt="Web Development icon">
+              </div>
+              <div class="svcHead">
+                <div class="svcTitle">Web Applications & Product Interfaces</div>
+                <div class="svcDesc">Modern web UIs and portals engineered for usability and performance.</div>
+              </div>
+              <div class="svcListTitle">Typical outcomes</div>
+              <ul class="svcList">
+                <li>Product UIs, portals, and admin systems</li>
+                <li>Visualization-rich and data-driven apps</li>
+                <li>Authentication, security, and maintainability</li>
+              </ul>
+            </div>
+
+            <div class="svcCard service" data-modal="xr">
+              <div class="svcIcon">
+                <img src="/img/icons/XRAndSim2.png" alt="XR & Simulation icon">
+              </div>
+              <div class="svcHead">
+                <div class="svcTitle">XR & Simulation Systems</div>
+                <div class="svcDesc">Interactive simulators and spatial tooling built for repeatable workflows.</div>
+              </div>
+              <div class="svcListTitle">Typical outcomes</div>
+              <ul class="svcList">
+                <li>Training simulators and interactive environments</li>
+                <li>Physics-driven interaction and device integration</li>
+                <li>Cross-platform builds and deployment pipelines</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="freePrototype">
+          <div class="wrap">
+            <div class="freePrototypeCard">
+              <h2>Your First Prototype Is Free</h2>
+              <p>
+                If we’re a fit, you should see progress fast. Share your idea and we’ll build an initial prototype at no cost
+                so you can evaluate execution quality before committing.
+              </p>
+
+              <div class="freePrototypeActions">
+                <a class="btn primary" href="#contact">Start a Free Prototype</a>
+                <a class="btn ghost" href="/products/">See What We Build</a>
+              </div>
+
+              <div class="freePrototypeNote">
+                No commitment. No pressure. Just working software.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="engagement">
+          <h2 class="midTitle">How Engagements Work</h2>
+          <p class="midSub">
+            Services are delivered as outcomes with clear milestones. The goal is fast alignment, then production-grade delivery.
+          </p>
+
+          <div class="engagementGrid">
+            <div class="card">
+              <div class="cardBody">
+                <div class="cardTitle">1) Discovery and Scope</div>
+                <p class="cardText">Clarify the problem, constraints, users, and acceptance criteria. Define what “done” means.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="cardBody">
+                <div class="cardTitle">2) Prototype Sprint</div>
+                <p class="cardText">Build a working vertical slice quickly. Validate usability, correctness, and performance early.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="cardBody">
+                <div class="cardTitle">3) Production Build</div>
+                <p class="cardText">Harden the system: testing, profiling, architecture, packaging, documentation, and handoff.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="notfor">
+          <h2 class="midTitle">What We Don’t Do</h2>
+          <p class="midSub">
+            AstrumArc is for teams who care about quality, maintainability, and real-world deployment.
+          </p>
+
+          <div class="dontGrid">
+            <div class="card">
+              <div class="cardBody">
+                <div class="cardTitle">Not a template shop</div>
+                <p class="cardText">We don’t sell generic template builds. The work is custom systems with real constraints.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="cardBody">
+                <div class="cardTitle">Not “just a script” work</div>
+                <p class="cardText">We don’t do one-off hacks with no long-term intent. We build things teams can maintain.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="cardBody">
+                <div class="cardTitle">Not speed over correctness</div>
+                <p class="cardText">We move fast, but correctness, usability, and performance are non-negotiable.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ctaBand" id="contact">
+          <h3>Tell Us What You’re Building</h3>
+          <p>
+            If your project involves complex data, visualization, automation, AI, or interactive simulation,
+            AstrumArc will build a system that works in the real world.
+          </p>
+          <div class="ctaActions">
+            <a class="btn primary" href="mailto:hello@astrumarc.com?subject=AstrumArc%20Services%20Inquiry">Get Started</a>
+            <a class="btn ghost" href="#services">See Services</a>
+          </div>
+          <p class="ctaNote">Replace the email link with your preferred contact method (form or booking link).</p>
+        </section>
+      </div>
+
+      <footer class="footerLight">
+        <div class="wrap">
+          <div class="foot">
+            <small>© <span id="year"></span> AstrumArc. All rights reserved.</small>
+            <div class="links">
+              <a href="/services/">Services</a>
+              <a href="/products/">Products</a>
+              <a href="/process/">Process</a>
+              <a href="/about/">About</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modalCard">
+      <div class="modalHead">
+        <div class="mtitle" id="modalTitle">Service</div>
+        <button class="xbtn" id="closeModal" aria-label="Close dialog">X</button>
+      </div>
+      <div class="modalBody" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
