@@ -1,3 +1,4 @@
+// services/js/script.js
 const yearEl = document.getElementById("year")
 if (yearEl) yearEl.textContent = new Date().getFullYear()
 
@@ -121,9 +122,7 @@ document.querySelectorAll(".service").forEach(el => {
 })
 
 if (closeModalBtn) closeModalBtn.addEventListener("click", closeModal)
-if (modal) {
-  modal.addEventListener("click", (e) => { if (e.target === modal) closeModal() })
-}
+if (modal) modal.addEventListener("click", (e) => { if (e.target === modal) closeModal() })
 window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal() })
 
 document.querySelectorAll('a[href^="#"]').forEach(a => {
