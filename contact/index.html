@@ -1,0 +1,281 @@
+<!-- contact/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AstrumArc | Contact</title>
+  <meta name="description" content="Contact AstrumArc. Tell us what you're building and we'll respond with clear next steps—no pressure, no buzzwords." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="../index.html">
+          <img src="../img/LogoAlpha.png" alt="AstrumArc Home" class="brandLogo" />
+        </a>
+
+        <nav class="navlinks" aria-label="Primary">
+          <a href="../services/index.html">Services</a>
+          <a href="../products/index.html">Products</a>
+          <a href="../process/index.html">Process</a>
+          <a href="../about/index.html">About</a>
+        </nav>
+
+        <div class="navcta">
+          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+          </button>
+          <a class="btn primary" href="#contact">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="mobilemenu" id="mobilemenu" aria-label="Mobile menu">
+        <a href="../services/index.html">Services</a>
+        <a href="../products/index.html">Products</a>
+        <a href="../process/index.html">Process</a>
+        <a href="../about/index.html">About</a>
+        <div class="row">
+          <a class="btn ghost" style="flex:1" href="../services/index.html">Explore Services</a>
+          <a class="btn primary" style="flex:1" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="heroDark heroBgImage">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div class="heroCopy">
+            <div class="kicker"><span class="dot"></span> Simple, direct, and human</div>
+            <h1>Let’s talk about<br><span class="em">what you’re building.</span></h1>
+            <p class="sub">
+              Tell us the goal, the constraints, and what “success” looks like. You’ll get a real response with clear next steps—no pressure, no buzzwords.
+            </p>
+
+            <div class="heroActions">
+              <a class="btn primary" href="#contact">Start a Conversation</a>
+              <a class="btn heroSecondary" href="../services/index.html">See What We Build</a>
+            </div>
+
+            <div class="heroAssurance">
+              Prefer email? Reach us at <a class="heroLink" href="mailto:hello@astrumarc.com?subject=AstrumArc%20Contact%20Request">hello@astrumarc.com</a>
+            </div>
+          </div>
+
+          <div class="heroSide">
+            <div class="heroCard">
+              <div class="hcTitle">What happens next</div>
+              <ol class="steps">
+                <li><span class="n">1</span><div><b>Send a note.</b> A few sentences is enough.</div></li>
+                <li><span class="n">2</span><div><b>We reply personally.</b> Clear questions + options.</div></li>
+                <li><span class="n">3</span><div><b>Short call if useful.</b> Scope, timeline, fit.</div></li>
+              </ol>
+              <div class="hcNote">No commitment. If it’s not a fit, you still leave with clarity.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="pageLight">
+      <div class="wrap">
+
+        <section class="section contactIntro" id="contact">
+          <div class="introGrid">
+            <div>
+              <h2 class="midTitle left">Contact AstrumArc</h2>
+              <p class="midSub left">
+                The fastest way to get momentum is to describe the problem in plain language. We’ll translate it into an actionable plan.
+              </p>
+
+              <div class="trustRow">
+                <div class="trust">
+                  <div class="tIcon">✓</div>
+                  <div>
+                    <div class="tTitle">You talk to the builder</div>
+                    <div class="tText">No layers. No gatekeeping. Just clear communication.</div>
+                  </div>
+                </div>
+                <div class="trust">
+                  <div class="tIcon">✓</div>
+                  <div>
+                    <div class="tTitle">No intimidation</div>
+                    <div class="tText">You don’t need perfect requirements to start.</div>
+                  </div>
+                </div>
+                <div class="trust">
+                  <div class="tIcon">✓</div>
+                  <div>
+                    <div class="tTitle">Fast iteration</div>
+                    <div class="tText">We prefer visible progress over long speculation.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="directBlock">
+                <div class="dbTitle">Direct contact</div>
+                <div class="dbRow">
+                  <a class="btn ghost" href="mailto:hello@astrumarc.com?subject=AstrumArc%20Project%20Inquiry">Email: hello@astrumarc.com</a>
+                  <button class="btn ghost" id="copyEmail" type="button" data-copy="hello@astrumarc.com">Copy Email</button>
+                </div>
+                <div class="tiny" id="copyToast" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="formCard">
+              <div class="fcHead">
+                <div class="fcTitle">Send a message</div>
+                <div class="fcSub">We’ll reply with thoughtful questions and next steps.</div>
+              </div>
+
+              <form class="contactForm" id="contactForm" action="mailto:hello@astrumarc.com" method="post" enctype="text/plain" novalidate>
+                <div class="fieldRow">
+                  <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" />
+                  </div>
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+                    <div class="hint" id="emailHint">We’ll use this only to respond.</div>
+                  </div>
+                </div>
+
+                <div class="fieldRow">
+                  <div class="field">
+                    <label for="company">Company (optional)</label>
+                    <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company / team" />
+                  </div>
+                  <div class="field">
+                    <label for="stage">Stage</label>
+                    <select id="stage" name="stage" required>
+                      <option value="" selected disabled>Select one</option>
+                      <option value="Idea">Idea</option>
+                      <option value="Prototype">Prototype</option>
+                      <option value="In development">In development</option>
+                      <option value="In production">In production</option>
+                      <option value="Not sure">Not sure</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="build">What are you looking to build?</label>
+                  <textarea id="build" name="project" rows="5" placeholder="Describe the goal, who uses it, and what success looks like." required></textarea>
+                  <div class="hint">If you can describe it, we can build it.</div>
+                </div>
+
+                <div class="fieldRow">
+                  <div class="field">
+                    <label for="timeline">Timeline (optional)</label>
+                    <select id="timeline" name="timeline">
+                      <option value="" selected>No preference</option>
+                      <option value="ASAP">ASAP</option>
+                      <option value="2-4 weeks">2–4 weeks</option>
+                      <option value="1-3 months">1–3 months</option>
+                      <option value="3-6 months">3–6 months</option>
+                      <option value="Exploring">Exploring</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="budget">Budget range (optional)</label>
+                    <select id="budget" name="budget">
+                      <option value="" selected>Prefer not to say</option>
+                      <option value="Under 5k">Under $5k</option>
+                      <option value="5k-15k">$5k–$15k</option>
+                      <option value="15k-50k">$15k–$50k</option>
+                      <option value="50k+">$50k+</option>
+                      <option value="Not sure">Not sure</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="check">
+                    <input type="checkbox" id="nda" name="nda" value="Interested in NDA" />
+                    <span>I’m interested in an NDA for sensitive details</span>
+                  </label>
+                </div>
+
+                <div class="formActions">
+                  <button class="btn primary" type="submit" id="submitBtn">Send Message</button>
+                  <button class="btn ghost" type="button" id="prefillBtn">Add Example Details</button>
+                </div>
+
+                <div class="formNote">
+                  By sending, you’re starting a conversation—not entering a contract.
+                </div>
+
+                <div class="formError" id="formError" role="alert" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="section faq">
+          <h3 class="storiesTitle">Quick answers</h3>
+          <div class="faqGrid">
+            <details class="faqItem">
+              <summary>Do I need a full spec to reach out?</summary>
+              <div class="faqBody">No. A goal + constraints is enough. We’ll help turn that into scope and milestones.</div>
+            </details>
+
+            <details class="faqItem">
+              <summary>What kinds of projects are a good fit?</summary>
+              <div class="faqBody">Software with real users and real workflows—especially when data, visualization, performance, or automation matter.</div>
+            </details>
+
+            <details class="faqItem">
+              <summary>How quickly will you respond?</summary>
+              <div class="faqBody">As fast as possible. You’ll get a real reply with next questions and options.</div>
+            </details>
+
+            <details class="faqItem">
+              <summary>Can we start small?</summary>
+              <div class="faqBody">Yes. We can start with a prototype or a limited slice to validate direction before scaling up.</div>
+            </details>
+          </div>
+        </section>
+
+        <section class="ctaBand">
+          <h3>Start with the simplest version</h3>
+          <p>
+            You don’t need the perfect plan. Describe the problem in plain language and we’ll build a path to a real solution.
+          </p>
+          <div class="ctaActions">
+            <a class="btn primary" href="#contact">Contact Us</a>
+            <a class="btn ghost" href="../services/index.html">Explore Services</a>
+          </div>
+        </section>
+
+      </div>
+
+      <footer class="footerLight">
+        <div class="wrap">
+          <div class="foot">
+            <small>© <span id="year"></span> AstrumArc. All rights reserved.</small>
+            <div class="links">
+              <a href="../services/index.html">Services</a>
+              <a href="../products/index.html">Products</a>
+              <a href="../process/index.html">Process</a>
+              <a href="../about/index.html">About</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="js/contact.js"></script>
+</body>
+</html>
