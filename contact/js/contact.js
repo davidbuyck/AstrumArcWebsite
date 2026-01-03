@@ -116,12 +116,12 @@ if (prefillBtn) {
 
     if (name && !name.value) name.value = "Jane Doe"
     if (company && !company.value) company.value = "Example Team"
-    if (stage && !stage.value) stage.value = "Prototype"
+    if (stage && !stage.value) stage.value = "Idea"
     if (timeline && !timeline.value) timeline.value = "1-3 months"
-    if (budget && !budget.value) budget.value = "15k-50k"
+    if (budget && !budget.value) budget.value = "$20k–$50k"
     if (build && !build.value) {
       build.value =
-        "We need an interactive web app that visualizes live operational data and helps our team make faster decisions. " +
+        "We need an interactive mobile app that visualizes live operational data and helps our team make faster decisions. " +
         "Users are internal operators. Success means clear dashboards, auditability, and a workflow that feels effortless."
     }
     if (nda && !nda.checked) nda.checked = true

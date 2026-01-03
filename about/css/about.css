@@ -9,9 +9,9 @@
   background:
     linear-gradient(
       180deg,
-      rgba(7,17,38,0.10) 0%,
-      rgba(7,17,38,0.10) 55%,
-      rgba(7,17,38,0.10) 100%
+      rgba(7,17,38,0.00) 0%,
+      rgba(7,17,38,0.00) 55%,
+      rgba(7,17,38,0.00) 100%
     ),
     url("../img/BackgroundPlainCrop.png");
   background-repeat: no-repeat;

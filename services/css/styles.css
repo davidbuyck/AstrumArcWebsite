@@ -191,23 +191,29 @@ button{font:inherit}
   max-height: 560px;
 }
 
+
 .heroBgImage{
   background:
-    linear-gradient(180deg, rgba(7,17,38,0.10) 0%, rgba(7,17,38,0.10) 55%, rgba(7,17,38,0.10) 100%),
+    linear-gradient(
+      180deg,
+      rgba(7,17,38,0) 0%,
+      rgba(7,17,38,0) 55%,
+      rgba(7,17,38,0) 100%
+    ),
     url("../img/BackgroundPlainCrop.png");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
 }
 
-.heroBgImage:after{
+/* .heroBgImage:after{
   content:"";
   position:absolute; inset:0;
   background:
     radial-gradient(900px 420px at 65% 25%, rgba(59,130,246,0.10), transparent 60%),
     radial-gradient(700px 520px at 20% 35%, rgba(147, 196, 253, 0.10), transparent 55%);
   pointer-events:none;
-}
+} */
 
 .heroGrid{
   display:grid;
@@ -232,8 +238,8 @@ button{font:inherit}
   border-radius: 22px;
   background: linear-gradient(
     90deg,
-    rgba(7,17,38,0.72) 0%,
-    rgba(7,17,38,0.60) 70%,
+    rgba(7,17,38,0.8) 0%,
+    rgba(7,17,38,0.8) 70%,
     rgba(7,17,38,0.0) 80%
   );
   pointer-events:none;
