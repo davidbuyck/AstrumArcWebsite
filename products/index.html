@@ -1,0 +1,374 @@
+<!-- products/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AstrumArc | Products</title>
+  <meta name="description" content="AstrumArc products: XR training, planning & guidance, AI-assisted tooling, and platform foundations—production-grade systems built for real workflows." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="css/products.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="../index.html">
+          <img src="../img/LogoAlpha.png" alt="AstrumArc Home" class="brandLogo" />
+        </a>
+
+        <nav class="navlinks" aria-label="Primary">
+          <a href="../services/index.html">Services</a>
+          <a class="active" href="index.html">Products</a>
+          <a href="../index.html#process">Process</a>
+          <a href="../index.html#about">About</a>
+        </nav>
+
+        <div class="navcta">
+          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+          </button>
+          <a class="btn primary" href="../index.html#contact">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="mobilemenu" id="mobilemenu" aria-label="Mobile menu">
+        <a href="../services/index.html">Services</a>
+        <a href="index.html">Products</a>
+        <a href="../index.html#process">Process</a>
+        <a href="../index.html#about">About</a>
+        <div class="row">
+          <a class="btn ghost" style="flex:1" href="../services/index.html">Explore Services</a>
+          <a class="btn primary" style="flex:1" href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="heroDark heroBgImage heroProductsBg">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div class="heroCopy">
+            <div class="kicker"><span class="dot"></span> Production products + platform foundations</div>
+            <h1>Products Built<br><span class="em">Across XR, Mobile, Desktop & Cloud.</span></h1>
+            <p class="sub">
+              AstrumArc ships real systems—training simulators, planning tools, real-time displays, and AI-augmented workflows.
+              Underneath, we build reusable foundations that scale across devices, teams, and regulated domains.
+            </p>
+
+            <div class="heroActions">
+              <a class="btn primary" href="#catalog">Explore Product Families</a>
+              <a class="btn heroSecondary" href="../index.html#contact">Talk to the Founder</a>
+            </div>
+
+            <div class="heroAssurance">
+              30+ applications shipped • 25,000+ installs • 130+ countries
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pageLight">
+      <div class="wrap">
+
+        <section class="section" id="catalog">
+          <h2 class="midTitle">Product Families</h2>
+          <p class="midSub">
+            Organized by outcome. Each family includes shipped products and expandable modules, delivered as standalone apps or integrated systems.
+          </p>
+
+          <div class="pills" role="tablist" aria-label="Product family filters">
+            <button class="pill active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="pill" data-filter="xr" role="tab" aria-selected="false">XR & Simulation</button>
+            <button class="pill" data-filter="planning" role="tab" aria-selected="false">Planning & Guidance</button>
+            <button class="pill" data-filter="ai" role="tab" aria-selected="false">AI-Assisted Tools</button>
+            <button class="pill" data-filter="platform" role="tab" aria-selected="false">Platforms & Foundations</button>
+            <button class="pill" data-filter="hardware" role="tab" aria-selected="false">Hardware & Control</button>
+          </div>
+
+          <div class="productGrid" id="productGrid">
+            <article class="productCard" data-tags="xr">
+              <div class="productTop">
+                <div class="badgeRow">
+                  <span class="badge">XR</span>
+                  <span class="badge soft">Training</span>
+                  <span class="badge soft">Multi-platform</span>
+                </div>
+                <h3 class="pTitle">XR Training & Simulation Suite</h3>
+                <p class="pDesc">
+                  Procedure-oriented simulators with real-time interaction, physics-driven behavior, and repeatable workflows.
+                  Built for skill transfer, rehearsal, and objective feedback loops.
+                </p>
+              </div>
+              <div class="productMeta">
+                <div class="metaItem">
+                  <div class="metaK">Ships as</div>
+                  <div class="metaV">VR/XR apps, desktop trainers, mobile companions</div>
+                </div>
+                <div class="metaItem">
+                  <div class="metaK">Used for</div>
+                  <div class="metaV">Training, education, rehearsal, scenario practice</div>
+                </div>
+              </div>
+              <div class="productActions">
+                <button class="btn ghost pMore" data-modal="suite_xr">View details</button>
+                <a class="btn primary" href="../index.html#contact">Request a demo</a>
+              </div>
+            </article>
+
+            <article class="productCard" data-tags="planning">
+              <div class="productTop">
+                <div class="badgeRow">
+                  <span class="badge">Planning</span>
+                  <span class="badge soft">3D</span>
+                  <span class="badge soft">Patient-specific</span>
+                </div>
+                <h3 class="pTitle">Pre-Procedural Planning Tools</h3>
+                <p class="pDesc">
+                  Patient-specific visualization, measurement, device fit checks, and scenario exploration.
+                  Designed for confident decisions under real constraints.
+                </p>
+              </div>
+              <div class="productMeta">
+                <div class="metaItem">
+                  <div class="metaK">Ships as</div>
+                  <div class="metaV">Desktop apps, web viewers, XR planning</div>
+                </div>
+                <div class="metaItem">
+                  <div class="metaK">Used for</div>
+                  <div class="metaV">Case planning, rehearsal, device strategy</div>
+                </div>
+              </div>
+              <div class="productActions">
+                <button class="btn ghost pMore" data-modal="suite_planning">View details</button>
+                <a class="btn primary" href="../index.html#contact">Discuss an integration</a>
+              </div>
+            </article>
+
+            <article class="productCard" data-tags="planning">
+              <div class="productTop">
+                <div class="badgeRow">
+                  <span class="badge">Guidance</span>
+                  <span class="badge soft">Real-time</span>
+                  <span class="badge soft">Operator UI</span>
+                </div>
+                <h3 class="pTitle">Real-Time Guidance Displays</h3>
+                <p class="pDesc">
+                  Fast, intuitive displays and integrations that empower operators to interpret signal + context,
+                  optimize procedures, and extend what’s possible in real time.
+                </p>
+              </div>
+              <div class="productMeta">
+                <div class="metaItem">
+                  <div class="metaK">Ships as</div>
+                  <div class="metaV">Device UIs, desktop consoles, embedded tooling</div>
+                </div>
+                <div class="metaItem">
+                  <div class="metaK">Used for</div>
+                  <div class="metaV">Intra-procedural monitoring and decision support</div>
+                </div>
+              </div>
+              <div class="productActions">
+                <button class="btn ghost pMore" data-modal="suite_guidance">View details</button>
+                <a class="btn primary" href="../index.html#contact">Talk about workflow</a>
+              </div>
+            </article>
+
+            <article class="productCard" data-tags="ai">
+              <div class="productTop">
+                <div class="badgeRow">
+                  <span class="badge">AI</span>
+                  <span class="badge soft">LLMs</span>
+                  <span class="badge soft">Automation</span>
+                </div>
+                <h3 class="pTitle">AI-Assisted Workflow Tools</h3>
+                <p class="pDesc">
+                  LLM assistance and automation patterns embedded directly into product UIs—reducing manual steps,
+                  accelerating interpretation, and improving operational throughput.
+                </p>
+              </div>
+              <div class="productMeta">
+                <div class="metaItem">
+                  <div class="metaK">Ships as</div>
+                  <div class="metaV">Web apps, desktop tools, internal platforms</div>
+                </div>
+                <div class="metaItem">
+                  <div class="metaK">Used for</div>
+                  <div class="metaV">Summaries, QA, guided workflows, ops automation</div>
+                </div>
+              </div>
+              <div class="productActions">
+                <button class="btn ghost pMore" data-modal="suite_ai">View details</button>
+                <a class="btn primary" href="../index.html#contact">Explore use cases</a>
+              </div>
+            </article>
+
+            <article class="productCard" data-tags="platform">
+              <div class="productTop">
+                <div class="badgeRow">
+                  <span class="badge">Platform</span>
+                  <span class="badge soft">Reusable</span>
+                  <span class="badge soft">Cross-device</span>
+                </div>
+                <h3 class="pTitle">Simulation & Intelligence Platform</h3>
+                <p class="pDesc">
+                  A modular foundation layer for building high-fidelity, intelligent software across XR, desktop, mobile, and cloud.
+                  Designed for reuse, speed, and maintainability.
+                </p>
+              </div>
+              <div class="productMeta">
+                <div class="metaItem">
+                  <div class="metaK">Includes</div>
+                  <div class="metaV">Engines, frameworks, UI patterns, data layers</div>
+                </div>
+                <div class="metaItem">
+                  <div class="metaK">Value</div>
+                  <div class="metaV">Faster development + consistent behavior across products</div>
+                </div>
+              </div>
+              <div class="productActions">
+                <button class="btn ghost pMore" data-modal="platform_core">View details</button>
+                <a class="btn primary" href="../index.html#contact">License or partner</a>
+              </div>
+            </article>
+
+            <article class="productCard" data-tags="hardware">
+              <div class="productTop">
+                <div class="badgeRow">
+                  <span class="badge">Hardware</span>
+                  <span class="badge soft">Robotics</span>
+                  <span class="badge soft">Controllers</span>
+                </div>
+                <h3 class="pTitle">Device Control & Hardware Integration</h3>
+                <p class="pDesc">
+                  Control systems and embedded integrations across XR and desktop—robotic actuation, tracking, microcontrollers,
+                  and real-time IO for device-adjacent workflows.
+                </p>
+              </div>
+              <div class="productMeta">
+                <div class="metaItem">
+                  <div class="metaK">Includes</div>
+                  <div class="metaV">Robotic prototypes, Pico controllers, device IO bridges</div>
+                </div>
+                <div class="metaItem">
+                  <div class="metaK">Used for</div>
+                  <div class="metaV">Simulation hardware, medical device workflows, test rigs</div>
+                </div>
+              </div>
+              <div class="productActions">
+                <button class="btn ghost pMore" data-modal="hardware_stack">View details</button>
+                <a class="btn primary" href="../index.html#contact">Discuss hardware</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="impact">
+          <div class="impactCard">
+            <div class="impactHead">
+              <h2>Proven at Scale</h2>
+              <p>
+                Not prototypes. Not pitchware. Real shipped applications used globally—across platforms and environments.
+              </p>
+            </div>
+
+            <div class="impactStats">
+              <div class="stat">
+                <div class="statNum" data-count="30">0</div>
+                <div class="statLbl">Applications shipped</div>
+              </div>
+              <div class="stat">
+                <div class="statNum" data-count="25000">0</div>
+                <div class="statLbl">Installations</div>
+              </div>
+              <div class="stat">
+                <div class="statNum" data-count="130">0</div>
+                <div class="statLbl">Countries reached</div>
+              </div>
+              <div class="stat">
+                <div class="statNum" data-count="5">0</div>
+                <div class="statLbl">Modalities shipped</div>
+              </div>
+            </div>
+
+            <div class="impactNote">
+              Delivered across XR headsets, iOS/Android, Windows/Linux, web platforms, and cloud-backed systems.
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="delivery">
+          <h2 class="midTitle">Delivery Modes</h2>
+          <p class="midSub">
+            Products can ship as standalone apps, integrated systems, licensed components, or custom deployments—without throwing away the engineering.
+          </p>
+
+          <div class="deliverGrid">
+            <div class="deliverCard">
+              <div class="deliverTitle">Standalone Products</div>
+              <p class="deliverText">Apps with clean UX, packaging, docs, and release pipelines across platforms.</p>
+            </div>
+            <div class="deliverCard">
+              <div class="deliverTitle">Integrated Systems</div>
+              <p class="deliverText">Embedded tooling and UI layers designed to integrate into existing device ecosystems.</p>
+            </div>
+            <div class="deliverCard">
+              <div class="deliverTitle">Licensed Components</div>
+              <p class="deliverText">Reusable engines, modules, and frameworks that compress build time for new products.</p>
+            </div>
+            <div class="deliverCard">
+              <div class="deliverTitle">Research → Product</div>
+              <p class="deliverText">Rapid prototypes that evolve into durable systems with clear scope and validation paths.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="ctaBand" id="contact">
+          <h3>Want a product like this in your domain?</h3>
+          <p>
+            If your work involves complex data, visualization, automation, AI, or device-adjacent workflows—AstrumArc can ship it.
+          </p>
+          <div class="ctaActions">
+            <a class="btn primary" href="mailto:hello@astrumarc.com?subject=AstrumArc%20Products%20Inquiry">Get Started</a>
+            <a class="btn ghost" href="../services/index.html">See Services</a>
+          </div>
+          <div class="ctaNote">No fixed packages. We scope based on real workflows.</div>
+        </section>
+      </div>
+
+      <footer class="footerLight">
+        <div class="wrap">
+          <div class="foot">
+            <small>© <span id="year"></span> AstrumArc. All rights reserved.</small>
+            <div class="links">
+              <a href="../services/index.html">Services</a>
+              <a href="index.html">Products</a>
+              <a href="../index.html#process">Process</a>
+              <a href="../index.html#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modalCard">
+      <div class="modalHead">
+        <div class="mtitle" id="modalTitle">Product</div>
+        <button class="xbtn" id="closeModal" aria-label="Close dialog">✕</button>
+      </div>
+      <div class="modalBody" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

@@ -1,4 +1,8 @@
 /* services/css/styles.css */
+.navlinks a.active{
+  background: rgba(255,255,255,.07);
+}
+
 :root{
   --dark0:#071126;
   --dark1:#0b1f47;
