@@ -775,3 +775,15 @@ h1{
   font-size: clamp(12px, 1.1vw, 14px);
   margin-top: clamp(10px, 1.3vw, 14px);
 }
+
+.badgeBtn{
+  cursor: pointer;
+}
+
+.badgeBtn:focus{
+  outline: none;
+}
+
+.badgeBtn:focus-visible{
+  box-shadow: 0 0 0 3px rgba(47,111,227,0.28);
+}

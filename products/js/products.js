@@ -113,3 +113,18 @@
     runCount();
   }
 })();
+
+
+var badgeBtns = qsa(".badgeBtn");
+var featuredSection = qs("#featured");
+
+badgeBtns.forEach(function (b) {
+  b.addEventListener("click", function () {
+    var tag = b.getAttribute("data-filter");
+    if (!tag) return;
+    applyFilter(tag);
+    if (featuredSection) {
+      featuredSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
