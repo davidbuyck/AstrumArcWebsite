@@ -778,23 +778,29 @@ h1{
 }
 
 .check{
-  width:18px;height:18px;
-  border-radius: 6px;
-  border: 1px solid rgba(47,111,227,0.25);
-  background: rgba(47,111,227,0.08);
+  width:18px;
+  height:18px;
+  border-radius: 7px;
+  border: 1px solid rgba(47,111,227,0.22);
+  background: linear-gradient(180deg, rgba(59,130,246,0.14), rgba(47,111,227,0.08));
   position: relative;
   margin-top: 2px;
   flex: 0 0 18px;
+  box-shadow: 0 6px 16px rgba(47,111,227,0.10);
 }
+
 .check:after{
   content:"";
   position:absolute;
-  left:5px; top:3px;
-  width:6px; height:10px;
-  border-right:2px solid rgba(47,111,227,0.95);
-  border-bottom:2px solid rgba(47,111,227,0.95);
-  transform: rotate(40deg);
+  left:50%;
+  top:50%;
+  width:11px;
+  height:8px;
+  transform: translate(-50%, -50%);
+  background: rgba(47,111,227,0.98);
+  clip-path: polygon(0 55%, 12% 40%, 38% 70%, 88% 8%, 100% 20%, 38% 100%);
 }
+
 
 .processSteps .stepGrid{
   display:grid;
