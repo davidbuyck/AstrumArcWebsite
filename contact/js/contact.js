@@ -137,7 +137,7 @@ if (prefillBtn) {
     if (company && !company.value) company.value = "Example Team"
     if (stage && !stage.value) stage.value = "Idea"
     if (timeline && !timeline.value) timeline.value = "1-3 months"
-    if (budget && !budget.value) budget.value = "Under $20k"
+    if (budget && !budget.value) budget.value = "$50k–$100k"
 
     if (build && !build.value) {
       build.value =
