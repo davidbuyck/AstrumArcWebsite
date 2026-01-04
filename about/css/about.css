@@ -233,3 +233,10 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 940px){
+  .heroBgAbout{
+    background-position: center center;
+    background-size: auto 100%;
+  }
+}
