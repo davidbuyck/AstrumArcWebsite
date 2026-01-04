@@ -227,12 +227,13 @@
 
 
           <div class="productGrid" id="productGrid">
-            <article class="productCard" data-tags="xr">
+
+            <article class="productCard" data-key="xr_suite" data-tags="xr">
               <div class="productTop">
                 <div class="badgeRow">
-                  <span class="badge">XR</span>
-                  <span class="badge soft">Training</span>
-                  <span class="badge soft">Multi-platform</span>
+                  <button class="badge badgeBtn" type="button" data-filter="xr">XR</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="xr">Training</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="platform">Multi-platform</button>
                 </div>
                 <h3 class="pTitle">XR Training & Simulation Suite</h3>
                 <p class="pDesc">
@@ -262,16 +263,16 @@
               </div>
 
               <div class="productActions">
-                <a class="btn primary" href="../contact/index.html">Request a demo</a>
+                <button class="btn primary detailsBtn" type="button">View details</button>
               </div>
             </article>
 
-            <article class="productCard" data-tags="planning">
+            <article class="productCard" data-key="preop_planning" data-tags="planning">
               <div class="productTop">
                 <div class="badgeRow">
-                  <span class="badge">Planning</span>
-                  <span class="badge soft">3D</span>
-                  <span class="badge soft">Case tools</span>
+                  <button class="badge badgeBtn" type="button" data-filter="planning">Planning</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="planning">3D</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="platform">Case tools</button>
                 </div>
                 <h3 class="pTitle">Pre-Procedural Planning Tools</h3>
                 <p class="pDesc">
@@ -301,16 +302,16 @@
               </div>
 
               <div class="productActions">
-                <a class="btn primary" href="../contact/index.html">Discuss your workflow</a>
+                <button class="btn primary detailsBtn" type="button">View details</button>
               </div>
             </article>
 
-            <article class="productCard" data-tags="guidance">
+            <article class="productCard" data-key="realtime_guidance" data-tags="guidance">
               <div class="productTop">
                 <div class="badgeRow">
-                  <span class="badge">Guidance</span>
-                  <span class="badge soft">Real-time</span>
-                  <span class="badge soft">Operator UI</span>
+                  <button class="badge badgeBtn" type="button" data-filter="guidance">Guidance</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="guidance">Real-time</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="guidance">Operator UI</button>
                 </div>
                 <h3 class="pTitle">Real-Time Guidance Displays</h3>
                 <p class="pDesc">
@@ -340,16 +341,16 @@
               </div>
 
               <div class="productActions">
-                <a class="btn primary" href="../contact/index.html">Talk about integration</a>
+                <button class="btn primary detailsBtn" type="button">View details</button>
               </div>
             </article>
 
-            <article class="productCard" data-tags="ai">
+            <article class="productCard" data-key="ai_workflow" data-tags="ai ml">
               <div class="productTop">
                 <div class="badgeRow">
-                  <span class="badge">AI</span>
-                  <span class="badge soft">LLMs</span>
-                  <span class="badge soft">Automation</span>
+                  <button class="badge badgeBtn" type="button" data-filter="ai">AI</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="ml">ML</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="data">Automation</button>
                 </div>
                 <h3 class="pTitle">AI-Assisted Workflow Tools</h3>
                 <p class="pDesc">
@@ -379,16 +380,16 @@
               </div>
 
               <div class="productActions">
-                <a class="btn primary" href="../contact/index.html">Explore use cases</a>
+                <button class="btn primary detailsBtn" type="button">View details</button>
               </div>
             </article>
 
-            <article class="productCard" data-tags="platform">
+            <article class="productCard" data-key="foundations" data-tags="platform">
               <div class="productTop">
                 <div class="badgeRow">
-                  <span class="badge">Platform</span>
-                  <span class="badge soft">Reusable</span>
-                  <span class="badge soft">Cross-device</span>
+                  <button class="badge badgeBtn" type="button" data-filter="platform">Platform</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="platform">Reusable</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="modernize">Scale</button>
                 </div>
                 <h3 class="pTitle">Reusable Product Foundations</h3>
                 <p class="pDesc">
@@ -418,16 +419,16 @@
               </div>
 
               <div class="productActions">
-                <a class="btn primary" href="../contact/index.html">Partner with AstrumArc</a>
+                <button class="btn primary detailsBtn" type="button">View details</button>
               </div>
             </article>
 
-            <article class="productCard" data-tags="hardware">
+            <article class="productCard" data-key="hardware_integration" data-tags="hardware">
               <div class="productTop">
                 <div class="badgeRow">
-                  <span class="badge">Hardware</span>
-                  <span class="badge soft">Robotics</span>
-                  <span class="badge soft">Controllers</span>
+                  <button class="badge badgeBtn" type="button" data-filter="hardware">Hardware</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="hardware">Robotics</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="guidance">Real-time IO</button>
                 </div>
                 <h3 class="pTitle">Hardware Integration & Control</h3>
                 <p class="pDesc">
@@ -457,11 +458,11 @@
               </div>
 
               <div class="productActions">
-                <a class="btn primary" href="../contact/index.html">Discuss hardware</a>
+                <button class="btn primary detailsBtn" type="button">View details</button>
               </div>
             </article>
 
-            <article class="productCard" data-tags="modernize platform">
+            <article class="productCard" data-key="modernization" data-tags="modernize platform">
               <div class="productTop">
                 <div class="badgeRow">
                   <button class="badge badgeBtn" type="button" data-filter="modernize">Modernization</button>
@@ -496,11 +497,11 @@
               </div>
 
               <div class="productActions">
-                <a class="btn primary" href="../contact/index.html">Fix + ship upgrades</a>
+                <button class="btn primary detailsBtn" type="button">View details</button>
               </div>
             </article>
 
-            <article class="productCard" data-tags="ml data">
+            <article class="productCard" data-key="ml_vision" data-tags="ml data">
               <div class="productTop">
                 <div class="badgeRow">
                   <button class="badge badgeBtn" type="button" data-filter="ml">ML</button>
@@ -534,11 +535,11 @@
               </div>
 
               <div class="productActions">
-                <a class="btn primary" href="../contact/index.html">Build ML into the product</a>
+                <button class="btn primary detailsBtn" type="button">View details</button>
               </div>
             </article>
 
-            <article class="productCard" data-tags="data platform">
+            <article class="productCard" data-key="data_platforms" data-tags="data platform">
               <div class="productTop">
                 <div class="badgeRow">
                   <button class="badge badgeBtn" type="button" data-filter="data">Data</button>
@@ -547,7 +548,7 @@
                 </div>
                 <h3 class="pTitle">Data Analytics Systems & Databases</h3>
                 <p class="pDesc">
-                  Analytics platforms for finance, medical prediction, economics, and operational reporting—built with clean data models,
+                  Analytics platforms across finance, medicine, economics, and operations—built with clean data models,
                   performance, and maintainability.
                 </p>
               </div>
@@ -573,11 +574,11 @@
               </div>
 
               <div class="productActions">
-                <a class="btn primary" href="../contact/index.html">Design the data system</a>
+                <button class="btn primary detailsBtn" type="button">View details</button>
               </div>
             </article>
 
-            <article class="productCard" data-tags="simulation platform">
+            <article class="productCard" data-key="simulation_twins" data-tags="simulation data platform">
               <div class="productTop">
                 <div class="badgeRow">
                   <button class="badge badgeBtn" type="button" data-filter="simulation">Simulation</button>
@@ -586,8 +587,8 @@
                 </div>
                 <h3 class="pTitle">Scientific Simulation & Digital Twins</h3>
                 <p class="pDesc">
-                  High-fidelity simulation with real datasets and correct physics. From kinematics/dynamics to domain-specific models
-                  that people can explore and learn from.
+                  High-fidelity simulation with real datasets and correct physics. From kinematics/dynamics to domain models
+                  people can explore and learn from.
                 </p>
               </div>
 
@@ -612,20 +613,20 @@
               </div>
 
               <div class="productActions">
-                <a class="btn primary" href="../contact/index.html">Model your domain</a>
+                <button class="btn primary detailsBtn" type="button">View details</button>
               </div>
             </article>
 
-            <article class="productCard" data-tags="ml planning">
+            <article class="productCard" data-key="recon_2d3d" data-tags="ml planning data">
               <div class="productTop">
                 <div class="badgeRow">
                   <button class="badge badgeBtn" type="button" data-filter="ml">ML</button>
                   <button class="badge soft badgeBtn" type="button" data-filter="planning">3D Reconstruction</button>
-                  <button class="badge soft badgeBtn" type="button" data-filter="planning">Medical Imaging</button>
+                  <button class="badge soft badgeBtn" type="button" data-filter="data">Imaging</button>
                 </div>
                 <h3 class="pTitle">2D-to-3D Reconstruction</h3>
                 <p class="pDesc">
-                  Generate accurate 3D anatomy or geometry from 2D imaging and measurements, then ship it inside usable planning and visualization tools.
+                  Generate usable 3D anatomy or geometry from 2D imaging, then ship it inside planning and visualization tools.
                 </p>
               </div>
 
@@ -645,16 +646,16 @@
                 </div>
                 <div class="metaItem">
                   <div class="metaK">Used for</div>
-                  <div class="metaV">Procedure planning, research, training, analysis</div>
+                  <div class="metaV">Planning, research, training, analysis</div>
                 </div>
               </div>
 
               <div class="productActions">
-                <a class="btn primary" href="../contact/index.html">Build the pipeline</a>
+                <button class="btn primary detailsBtn" type="button">View details</button>
               </div>
             </article>
 
-            <article class="productCard" data-tags="education xr ai">
+            <article class="productCard" data-key="adaptive_edu" data-tags="education xr ai ml data platform">
               <div class="productTop">
                 <div class="badgeRow">
                   <button class="badge badgeBtn" type="button" data-filter="education">Education</button>
@@ -663,7 +664,7 @@
                 </div>
                 <h3 class="pTitle">Adaptive Education Platforms</h3>
                 <p class="pDesc">
-                  Fully automated, adaptive learning platforms where AI generates content and experiences, with personalization driven by real user signals.
+                  Automated learning platforms where AI generates material and XR experiences, adapting difficulty using real user signals and wearables.
                 </p>
               </div>
 
@@ -671,7 +672,7 @@
                 <div class="exTitle">Examples</div>
                 <div class="exRow">
                   <span class="exPill">AI lesson generation</span>
-                  <span class="exPill">XR learning experiences</span>
+                  <span class="exPill">XR learning modules</span>
                   <span class="exPill">Wearable-driven adaptation</span>
                 </div>
               </div>
@@ -688,11 +689,12 @@
               </div>
 
               <div class="productActions">
-                <a class="btn primary" href="../contact/index.html">Design the platform</a>
+                <button class="btn primary detailsBtn" type="button">View details</button>
               </div>
             </article>
 
           </div>
+
         </section>
 
         <section class="section" id="bridge">
@@ -810,7 +812,6 @@
             <small>© <span id="year"></span> AstrumArc. All rights reserved.</small>
             <div class="links">
               <a href="../services/index.html">Services</a>
-              <a href="index.html">Products</a>
               <a href="../process/index.html">Process</a>
               <a href="../about/index.html">About</a>
               <a href="../contact/index.html">Contact</a>
@@ -820,6 +821,21 @@
       </footer>
     </div>
   </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modalCard">
+    <div class="modalHead">
+      <div class="mtitle" id="modalTitle">Details</div>
+      <button class="xbtn" id="closeModal" aria-label="Close dialog">✕</button>
+    </div>
+    <div class="modalBody" id="modalBody"></div>
+    <div class="modalFoot">
+      <a class="btn primary" href="../contact/index.html">Get Started</a>
+      <button class="btn ghost" id="modalCloseBtn" type="button">Close</button>
+    </div>
+  </div>
+</div>
+
 
   <script src="js/products.js"></script>
 </body>

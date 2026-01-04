@@ -787,3 +787,108 @@ h1{
 .badgeBtn:focus-visible{
   box-shadow: 0 0 0 3px rgba(47,111,227,0.28);
 }
+
+.modal{
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,.62);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding: 18px;
+  z-index: 80;
+}
+
+.modal.open{
+  display:flex;
+}
+
+.modalCard{
+  width:min(860px, 100%);
+  border-radius: 22px;
+  border:1px solid rgba(255,255,255,.14);
+  background:
+    radial-gradient(700px 320px at 30% 0%, rgba(96,165,250,.22), transparent 62%),
+    linear-gradient(180deg, rgba(10,18,40,.96), rgba(7,11,22,.96));
+  box-shadow: 0 30px 90px rgba(0,0,0,.65);
+  overflow:hidden;
+  color: rgba(232,238,252,.95);
+}
+
+.modalHead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 14px 12px;
+  border-bottom:1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+}
+
+.modalHead .mtitle{
+  font-weight: 950;
+  letter-spacing: -0.2px;
+}
+
+.xbtn{
+  width:40px;
+  height:40px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+  cursor:pointer;
+  color: rgba(232,238,252,.95);
+}
+
+.modalBody{
+  padding: 16px 16px 10px;
+  line-height: 1.55;
+  max-height: min(68vh, 720px);
+  overflow:auto;
+}
+
+.modalFoot{
+  display:flex;
+  gap:10px;
+  justify-content:flex-end;
+  padding: 12px 14px 14px;
+  border-top:1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+}
+
+.mIntro{
+  color: rgba(205,214,235,.92);
+  margin: 0 0 14px;
+}
+
+.modalGrid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.mblock{
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  padding:12px;
+}
+
+.mblock .h{
+  font-weight: 950;
+  margin-bottom: 8px;
+}
+
+.mblock ul{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(183,194,225,.92);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+@media (max-width: 860px){
+  .modalGrid{
+    grid-template-columns: 1fr;
+  }
+}
