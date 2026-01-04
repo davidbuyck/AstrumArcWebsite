@@ -130,7 +130,14 @@
                 <div class="fcSub">We’ll reply with thoughtful questions and next steps.</div>
               </div>
 
-              <form class="contactForm" id="contactForm" action="mailto:david@astrumarc.com" method="post" enctype="text/plain" novalidate>
+              <form class="contactForm" id="contactForm"
+                    action="https://formspree.io/f/xvzgvyap"
+                    method="POST" novalidate>
+
+                <input type="hidden" name="_subject" value="AstrumArc Contact Request" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" />
+
                 <div class="fieldRow">
                   <div class="field">
                     <label for="name">Name</label>
@@ -139,7 +146,7 @@
                   <div class="field">
                     <label for="email">Email</label>
                     <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
-                    <div class="hint" id="emailHint">We’ll use this only to respond.</div>
+                    <div class="hint">We’ll use this only to respond.</div>
                   </div>
                 </div>
 
@@ -163,7 +170,9 @@
 
                 <div class="field">
                   <label for="build">What are you looking to build?</label>
-                  <textarea id="build" name="project" rows="5" placeholder="Describe the goal, who uses it, and what success looks like." required></textarea>
+                  <textarea id="build" name="project" rows="5"
+                    placeholder="Describe the goal, who uses it, and what success looks like."
+                    required></textarea>
                   <div class="hint">If you can describe it, we can build it.</div>
                 </div>
 
@@ -210,8 +219,9 @@
                   By sending, you’re starting a conversation—not entering a contract.
                 </div>
 
-                <div class="formError" id="formError" role="alert" aria-live="polite"></div>
+                <div class="formStatus" id="formStatus" aria-live="polite"></div>
               </form>
+
             </div>
           </div>
         </section>

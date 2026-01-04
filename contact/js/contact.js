@@ -1,4 +1,3 @@
-// js/contact.js
 const yearEl = document.getElementById("year")
 if (yearEl) yearEl.textContent = new Date().getFullYear()
 
@@ -61,46 +60,66 @@ if (emailBtn) {
 }
 
 const form = document.getElementById("contactForm")
-const formError = document.getElementById("formError")
 const submitBtn = document.getElementById("submitBtn")
+const statusEl = document.getElementById("formStatus")
 const prefillBtn = document.getElementById("prefillBtn")
 
 const isEmail = (s) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(s || "").trim())
 
-const setError = (msg) => {
-  if (formError) formError.textContent = msg || ""
+const setStatus = (msg, ok) => {
+  if (!statusEl) return
+  statusEl.textContent = msg || ""
+  statusEl.style.color = ok ? "#067647" : "#b42318"
 }
 
 if (form) {
-  form.addEventListener("submit", (e) => {
-    setError("")
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault()
+    setStatus("", false)
+
     const email = document.getElementById("email")?.value || ""
     const stage = document.getElementById("stage")?.value || ""
     const build = document.getElementById("build")?.value || ""
 
     if (!isEmail(email)) {
-      e.preventDefault()
-      setError("Please enter a valid email so we can reply.")
+      setStatus("Please enter a valid email so we can reply.", false)
       document.getElementById("email")?.focus()
       return
     }
 
     if (!stage) {
-      e.preventDefault()
-      setError("Please select a stage (it helps us respond accurately).")
+      setStatus("Please select a stage.", false)
       document.getElementById("stage")?.focus()
       return
     }
 
     if (String(build).trim().length < 12) {
-      e.preventDefault()
-      setError("Give us a little more detail—one or two sentences is enough.")
+      setStatus("Give us a little more detail—one or two sentences is enough.", false)
       document.getElementById("build")?.focus()
       return
     }
 
     if (submitBtn) submitBtn.disabled = true
-    setTimeout(() => { if (submitBtn) submitBtn.disabled = false }, 1200)
+    setStatus("Sending…", true)
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: new FormData(form)
+      })
+
+      if (res.ok) {
+        setStatus("Message sent. We’ll reply soon.", true)
+        form.reset()
+      } else {
+        setStatus("Send failed. Please email david@astrumarc.com.", false)
+      }
+    } catch {
+      setStatus("Send failed. Please email david@astrumarc.com.", false)
+    } finally {
+      if (submitBtn) submitBtn.disabled = false
+    }
   })
 }
 
@@ -118,13 +137,15 @@ if (prefillBtn) {
     if (company && !company.value) company.value = "Example Team"
     if (stage && !stage.value) stage.value = "Idea"
     if (timeline && !timeline.value) timeline.value = "1-3 months"
-    if (budget && !budget.value) budget.value = "$20k–$50k"
+    if (budget && !budget.value) budget.value = "Under $20k"
+
     if (build && !build.value) {
       build.value =
         "We need an interactive mobile app that visualizes live operational data and helps our team make faster decisions. " +
         "Users are internal operators. Success means clear dashboards, auditability, and a workflow that feels effortless."
     }
+
     if (nda && !nda.checked) nda.checked = true
-    setError("")
+    setStatus("", false)
   })
 }
