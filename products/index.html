@@ -190,20 +190,43 @@
             </article>
           </div>
 
-          <div class="miniCta">
-            <div class="miniCtaCopy">
-              <div class="miniCtaTitle">Pick your starting point</div>
-              <div class="miniCtaSub">Tell us what you need, and we will shape the build around it.</div>
+          <div class="miniCta intentSplit" id="intentSplit">
+            <div class="intentLeft">
+              <div class="miniCtaTitle">Pick a starting point</div>
+              <div class="miniCtaSub">
+                Choose what you’re trying to accomplish. We’ll show you what that typically looks like.
+              </div>
+
+              <div class="miniCtaChoices" id="intentChoices">
+                <button class="choice" data-intent="scratch" type="button">Build a product from scratch</button>
+                <button class="choice" data-intent="prototype" type="button">Prototype to validate an idea</button>
+                <button class="choice" data-intent="upgrade" type="button">Upgrade performance + UX</button>
+                <button class="choice" data-intent="integrate" type="button">Integrate with existing systems</button>
+                <button class="choice" data-intent="automate" type="button">Automate a manual workflow</button>
+              </div>
             </div>
-            <div class="miniCtaChoices" role="list">
-              <a class="choice" href="../contact/index.html">Build a product from scratch</a>
-              <a class="choice" href="../contact/index.html">Prototype to validate an idea</a>
-              <a class="choice" href="../contact/index.html">Upgrade performance + UX</a>
-              <a class="choice" href="../contact/index.html">Integrate with existing systems</a>
-              <a class="choice" href="../contact/index.html">Automate a manual workflow</a>
+
+            <div class="intentRight" aria-live="polite">
+              <div class="intentPanelStatic" id="intentPanelStatic">
+                <div class="intentHint" id="intentHint">
+                  Select a starting point to see what it includes.
+                </div>
+
+                <div class="intentPanel" id="intentPanel" hidden>
+                  <div class="intentTitle" id="intentTitle"></div>
+                  <div class="intentDesc" id="intentDesc"></div>
+                  <ul class="intentList" id="intentList"></ul>
+
+                  <div class="intentActions">
+                    <a class="btn primary" href="../contact/index.html" id="intentCTA">Get started</a>
+                    <button class="btn ghost" id="intentClose" type="button">Clear</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
+
+
 
         <section class="section" id="featured">
           <h2 class="midTitle">Featured Product Lines</h2>

@@ -446,4 +446,108 @@
   } else {
     runCount();
   }
+
+  var intentPanel = qs("#intentPanel");
+  var intentHint = qs("#intentHint");
+  var intentTitle = qs("#intentTitle");
+  var intentDesc = qs("#intentDesc");
+  var intentList = qs("#intentList");
+  var intentCTA = qs("#intentCTA");
+  var intentClose = qs("#intentClose");
+
+  var INTENTS = {
+    scratch: {
+      title: "Build a product from scratch",
+      desc: "You have an idea and want a production-grade product built end-to-end.",
+      bullets: [
+        "Clarify users, workflows, and constraints",
+        "Design architecture and UX together",
+        "Build a working system (not just screens)",
+        "Ship with docs, packaging, and a growth path"
+      ],
+      cta: "Start a product conversation"
+    },
+    prototype: {
+      title: "Prototype to validate an idea",
+      desc: "You want to prove feasibility and usability before going all-in.",
+      bullets: [
+        "Fast vertical slice with real interaction",
+        "De-risk performance, UX, or integration",
+        "Built to evolve into production if it hits",
+        "Clear next-step plan after validation"
+      ],
+      cta: "Discuss a prototype"
+    },
+    upgrade: {
+      title: "Upgrade performance + UX",
+      desc: "You already have software, but it’s slow, brittle, or hard to use.",
+      bullets: [
+        "Performance profiling and bottleneck removal",
+        "UX cleanup without breaking workflows",
+        "Architecture hardening and maintainability",
+        "Incremental releases, not risky rewrites"
+      ],
+      cta: "Plan an upgrade"
+    },
+    integrate: {
+      title: "Integrate with existing systems",
+      desc: "You need new capability to work cleanly with your current stack/devices/data.",
+      bullets: [
+        "API + data integrations",
+        "Device/sensor/hardware IO as needed",
+        "Reliable sync, logging, and error handling",
+        "UI that fits existing workflows"
+      ],
+      cta: "Talk through integration"
+    },
+    automate: {
+      title: "Automate a manual workflow",
+      desc: "People are doing repetitive, error-prone work that software should handle.",
+      bullets: [
+        "Map the real workflow (not the ideal one)",
+        "Design automation users trust",
+        "Integrate with current tools and data",
+        "Measure time saved and reliability gains"
+      ],
+      cta: "Explore automation"
+    }
+  };
+
+  function clearIntentSelection() {
+    qsa(".choice").forEach(function (b) { b.classList.remove("active"); });
+    if (intentPanel) intentPanel.hidden = true;
+    if (intentHint) intentHint.hidden = false;
+  }
+
+  qsa(".choice").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var key = btn.getAttribute("data-intent");
+      var d = INTENTS[key];
+      if (!d) return;
+
+      qsa(".choice").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+
+      intentTitle.textContent = d.title;
+      intentDesc.textContent = d.desc;
+      intentCTA.textContent = d.cta;
+
+      intentList.innerHTML = "";
+      d.bullets.forEach(function (t) {
+        var li = document.createElement("li");
+        li.textContent = t;
+        intentList.appendChild(li);
+      });
+
+      intentHint.hidden = true;
+      intentPanel.hidden = false;
+    });
+  });
+
+  if (intentClose) intentClose.addEventListener("click", clearIntentSelection);
+
+
 })();
+
+
+
