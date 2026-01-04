@@ -203,7 +203,7 @@ button{font:inherit}
       rgba(7,17,38,0) 55%,
       rgba(7,17,38,0) 100%
     ),
-    url("../img/BackgroundPlainCrop.png");
+    url("../img/BackgroundPlainCrop.webp");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
