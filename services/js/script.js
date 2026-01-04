@@ -97,7 +97,7 @@ const openModal = (key) => {
       `).join("")}
     </div>
     <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-      <a class="btn primary" href="../contact/index.html">Talk About a Project</a>
+      <a class="btn primary" href="../contact/">Talk About a Project</a>
     </div>
   `
   modal.classList.add("open")
