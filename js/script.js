@@ -130,3 +130,63 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 document.querySelectorAll(".thumb[data-img]").forEach(t => {
   t.style.backgroundImage = `url("${t.dataset.img}")`
 })
+
+// =========================================================
+// Featured videos
+// =========================================================
+
+const featuredVideos = Array.from(
+  document.querySelectorAll(".featuredVideo")
+);
+
+featuredVideos.forEach((video) => {
+
+  // Pause every other featured video when one starts playing.
+  video.addEventListener("play", () => {
+
+    featuredVideos.forEach((otherVideo) => {
+      if (otherVideo !== video && !otherVideo.paused) {
+        otherVideo.pause();
+      }
+    });
+
+    const card = video.closest(".videoCard");
+
+    if (card) {
+      card.classList.add("isPlaying");
+    }
+  });
+
+  // Remove playing styling when paused.
+  video.addEventListener("pause", () => {
+
+    const card = video.closest(".videoCard");
+
+    if (card) {
+      card.classList.remove("isPlaying");
+    }
+  });
+
+  // Remove playing styling when finished.
+  video.addEventListener("ended", () => {
+
+    const card = video.closest(".videoCard");
+
+    if (card) {
+      card.classList.remove("isPlaying");
+    }
+  });
+
+  // Helpful debugging if a video fails to load.
+  video.addEventListener("error", () => {
+
+    const source = video.querySelector("source");
+
+    console.error(
+      "Failed to load featured video:",
+      source ? source.src : "Unknown source",
+      video.error
+    );
+  });
+
+});
